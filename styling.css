@@ -1,0 +1,110 @@
+div.container {
+    width: 100%;
+    border: none;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    border: none;
+}
+
+.navleft {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 126px 60px;
+    text-align: center;
+    background-color: green;
+    text-transform: uppercase;
+}
+
+
+.navright {
+    float: right;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    padding: 126px 50px;
+    background-color: green;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border: 1px solid gray;
+    padding: 17px;
+    overflow: hidden;
+}
+
+#intro {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+.starter{
+    height:500px;
+    width: 200px;
+}
+.navleft li a {
+    display: block;
+    color: white;
+    padding: 10px 5px;
+    text-decoration: none;
+}
+
+.navright li a {
+    display: block;
+    color: white;
+    padding: 10px 5px;
+    text-decoration: none;
+}
+.boda{
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    
+
+}
+.stylish{
+    position: relative;
+    position: fixed-top;
+    border: none;
+}
+.navi li a {
+    color: #ffffff;
+    padding: 10px 5px;
+    text-decoration: none;
+    font-family: "Bookman Old Style";
+    text-transform: uppercase;
+    
+}
+
+.navi li {
+    display: inline;
+
+}
+
+.heading{
+    color: white;
+}
+
+article {
+    background-color: black;
+}
