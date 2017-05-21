@@ -37,10 +37,10 @@
     <br>
     <br>
     <div class="col-sm-6 col-md-6">
-        <h4>Client Registration</h4>
+        <h4>Worker Registration</h4>
         <p>kindly enter the required personal information to register for our services</p>
         <p>Each slot in the form below must be filled</p>
-        <form action="../php/insert.php" method="post">
+        <form action="../php/insertworker.php" method="post">
             <fieldset>
                 <legend style="text-align: center">Personal info</legend>
                 <div class="form-group col-xs-3">
@@ -54,6 +54,33 @@
                 <div class="form-group col-xs-6">
                     <label for="userName">User name:</label>
                     <input type="text" class="form-control" id="userName" name="userName" required title="Please enter your preferred user name">
+                </div>
+                <div class="form-group col-xs-6">
+                    <label for="natID">National ID number:</label>
+                    <input type="text" class="form-control" id="natID" name="natID" required title="Please enter your natinal identification card number">
+                </div>
+                <div class="form-group col-xs-6">
+                    <label for="workerSkills">Skills Category:</label>
+                    <input list="workerSkills" class="form-control"  name="workerSkills" required title="Please enter your your skill category">
+                    <datalist id="workerSkills">
+                        <option value="Carpenter">
+                        <option value="Cleaner">
+                        <option value="Electrician">
+                        <option value="Plumber">
+                        <option value="Mechanic">
+                        <option value="Painter">
+                        <option value="Welder">
+                        <option value="Gardener/Landscape artist">
+                        <option value="Car driver">
+                    </datalist>
+                </div>
+                <div class="form-group col-xs-6">
+                    <label for="tertiaryInstitution">Tertiary Institution Attended:</label>
+                    <input type="text" class="form-control" id="tertiaryInstitution" name="tertiaryInstitution" required title="Please enter the name of the institution that you attended">
+                </div>
+                <div class="form-group col-xs-6">
+                    <label for="testimonial">Testimonial Document:</label>
+                    <input type="file" class="form-control" id="testimonial" name="testimonial" required title="Please enter your a relevant certificate document">
                 </div>
                 <div class="form-group col-xs-6">
                     <label for="email">Email address:</label>
@@ -376,25 +403,12 @@
 
                 <div class="form-group col-xs-6">
                     <label for="passWord">Password:</label>
-                    <input type="password" class="form-control" id="passWord" name="clientPassWord" required title="please enter a preferred user password">
+                    <input type="password" class="form-control" id="passWord" name="workerPassWord" required title="please enter a preferred user password">
                 </div>
                 <br>
                 <br>
                 <div class="clearfix"></div>
-                <p>
-                    <strong>Please pinpoint your location on the map for easy navigation to your premises</strong>
-                </p>
-                <div id="map"></div>
-                <br>
-                <br>
-                <div class="form-group col-xs-6">
-                    <label for="lat">latitude:</label>
-                    <input type="text" id="lat" readonly="yes" name="latitude" class="form-control"><br><br>
-                </div>
-                <div class="form-group col-xs-6">
-                    <label for="lng">Longitude:</label>
-                    <input type="text" id="lng" readonly="yes" name="longitude" class="form-control">
-                </div>
+
                 <br>
                 <br>
                 <button type="submit" class="btn btn-default">Submit</button>
