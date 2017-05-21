@@ -4,7 +4,8 @@
         <style type="text/css">
           #map{ width:700px; height: 500px; }
         </style>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiBRKFRQvYcetiPIotdfje3IVhQRIHcOc&callback=initMap"
+  type="text/javascript"></script>
         <title>Save Marker Example</title>
     </head>
     <body>
@@ -17,7 +18,7 @@
         <!--our form-->
         <h2>Chosen Location</h2>
         <form method="post">
-            <input type="text" id="lat" readonly="yes"><br>
+            <input type="text" id="lat" readonly="yes"><br><br>
             <input type="text" id="lng" readonly="yes">
         </form>
         

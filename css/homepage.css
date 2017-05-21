@@ -1,0 +1,44 @@
+.thedropdown {
+    background-color: #222;
+    margin:0;
+    padding:0;
+}
+ .thedropdown li a{
+     color: #9d9d9d;
+     text-align: center;
+     padding: 0;
+     margin: 0;
+     font-size: 0.875em;
+ }
+
+.thedropdown li {
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer div ul{
+    list-style-type: none;
+}
+.site-footer div ul li a, .site-footer div h5{
+    color: #9d9d9d;
+}
+.site-footer {
+    background-color: #222;
+}
+
+body {
+    font-size: 120%;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.875em;
+}
+
+p a footer {
+    font-size: 1.875em;
+}
+

@@ -1,92 +1,105 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<link href="styling.css" type="text/css" rel="stylesheet"/>
-		<title>the webpage</title>
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>The Fundis</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/homepage.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-		<div class="container">
+<nav class="navbar navbar-inverse navbar-transparent navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">The Fundis</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Book Job</a></li>
+				<li><a href="#">about Us</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+				<!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>Sign Up<span class="caret"></span></a>
+					<ul class="dropdown-menu thedropdown">
+						<li><a href="html/client%20registration.html">Client</a></li>
+						<li><a href="html/worker%20registration.html">Worker</a></li>
+					</ul>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"></span> Login<span class="caret"></span></a>
+					<ul class="dropdown-menu thedropdown">
+						<li><a href="#">Client</a></li>
+						<li><a href="#">Worker</a></li>
+					</ul>
+			</ul>
+		</div>
+	</div>
 
-			<header class="boda">	
-			<!--<div class="starter">
-				<img src="download.jpg">
-			</div>-->
-				
-				<div class="stylish">
-				<table >
-					<tr>
-						<td>
-							<img src="images/download.jpg" alt="games zone"/>
-						</td>
-						<td>
+</nav>
 
-						<table class="">
-								<tr>
-									<td>
-										<h3 id="intro">THE HOME OF GAMERS<h3>
-									</td>
-									
-								<tr>
-									<div>
-										<td>
-											<ul class="navi">
-												<li><a href="#">customer care</a></li>
-												<li><a href="#">m-pesa</a></li>
-												<li><a href="#">mobile store</a></li>
-												<li><a href="#">account settings</a></li>
-												<li><a href="#">help</a></li>
-											</ul>
-										</td>
-									</div>
-								</tr>
-						</table>	
-						</td>
-					</tr>
-				</table>
-				</div>
-			</header>
-			  
-			<aside class="navleft">
-				<ul>
-					<li><a href="#">Airtime</a></li>
-					<li><a href="#">shop</a></li>
-					<li><a href="#">logout</a></li>
-				</ul>
-			 
-			</aside>
+<div class="container">
+	<h3>Collapsible Navbar</h3>
+	<p>In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+	<p>Only when the button is clicked, the navigation bar will be displayed.</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus gravida lorem, non blandit lorem
+		fermentum nec. Cras consectetur convallis neque vitae lobortis. Phasellus ultrices dui risus, a bibendum leo
+		vulputate sed. Nullam lacinia mollis felis ut auctor. Aliquam scelerisque eget lacus a accumsan. Quisque ultrices velit et feugiat volutpat. Aenean vitae massa eu diam aliquam volutpat. Praesent eget tellus sem. Morbi dictum pretium tempus. Fusce consequat posuere quam sit amet molestie. Nulla quis risus feugiat, convallis turpis at, laoreet ipsum. Fusce aliquam lorem sem.
 
-			<aside class="navright">
-			  <ul>
-			    <li><img src="images/face.jpg" alt="facebooklink" height="25px" width="25px"></li>
-				<li><img src="images/tweeter.jpg" alt="tweeter" height="25px" width="25px"></li>
-				<li><img src="images/playstrree.jpg" alt="playstore" width="70" height="25"></li>
-				<li><img src="images/appledown.png" alt="applestore width="70" height="25"></li>
-			  </ul>
-			</aside>
+		Aenean commodo imperdiet turpis, eu fringilla libero. Nam vitae mi mauris. Suspendisse dictum tellus vel turpis
+		pharetra dignissim. Cras mattis ullamcorper lorem, vitae lacinia massa faucibus suscipit. Ut aliquam quam ac arcu dictum consectetur. Nullam fringilla pretium tincidunt. Donec dapibus consequat est, ut maximus nibh dapibus nec. Quisque elementum, justo at pharetra posuere, ligula ex iaculis erat, eu iaculis tortor risus nec massa. Etiam et finibus nulla. Sed bibendum vehicula dolor, at dictum sapien bibendum ut. Mauris ex felis, rhoncus sit amet facilisis non, posuere ut nisl. Curabitur egestas, mauris vel vestibulum finibus, enim risus volutpat arcu, at eleifend felis lacus et orci.
 
-			<article>
-				<h3 class="heading">The Kenyan Superman</h3>
-				<img src="images/sleepy2.jpg" alt="sleepyapp" height="200px" width="225px">
-				<img src="images/screen1.jpg" alt="screen1" height="200px" width="117px">
-				<img src="images/screen2.jpg" alt="screen2" height="200px" width="117px">
-				<img src="images/screen3.jpg" alt="screen3" height="200px" width="117px">
-				<img src="images/screen4.jpg" alt="screen4" height="200px" width="117px">
-				<img src="icons/Businessman_48px.png" alt="screen5">
-				<p class="heading">
-					Keep Sleepy Awake is a Brand New Mobile App Game that is both exciting and intriguing. The game is entertaining and engages the player with comical wits of the Comedian SLEEPY DAVID as you play. !!! Download and enjoy.Lets have fun. Kenya is playing
-				</p>
+		In nec venenatis eros. Nam vestibulum tellus non porta ornare. Duis varius dolor sit amet quam posuere elementum.
+		Donec accumsan metus quis odio pulvinar feugiat. Mauris molestie, nibh id efficitur aliquam, diam urna scelerisque
 
-			</article>
+		eros, pellentesque tempus dui odio sed tellus. Aliquam feugiat purus a arcu mattis, sit amet varius neque ullamcor
+		per. Vivamus vel facilisis nibh, vel bibendum lacus. Vivamus consectetur ex sed libero dignissim faucibus. Nam te
+		mpor turpis scelerisque ullamcorper feugiat.
 
-			<footer>
-				A Division Of Wachezaji Sacco
-				Copyright © 2016 Wachezaji Sacco
-			</footer>
+		Nulla eu cursus diam. Ut at fringilla nibh. Morbi non nisi urna. Curabitur ipsum felis, aliquam at velit in, viverra tristique lacus. Nulla facilisi. Vestibulum sollicitudin mi vel tortor egestas, ac aliquam justo condimentum. Vestibulum leo risus, elementum eget sem et, gravida scelerisque mauris. In arcu lectus, egestas ac eros eget, varius viverra erat. Suspendisse sollicitudin lacinia quam vel tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed commodo, urna eget euismod accumsan, lectus velit bibendum elit, ac bibendum velit augue quis augue. Donec laoreet posuere augue, vitae porta elit dignissim a. Integer varius dui vitae pretium varius.
+
+
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus gravida lorem, non blandit lorem fermentum nec. Cras consectetur convallis neque vitae lobortis. Phasellus ultrices dui risus, a bibendum leo vulputate sed. Nullam lacinia mollis felis ut auctor. Aliquam scelerisque eget lacus a accumsan. Quisque ultrices velit et feugiat volutpat. Aenean vitae massa eu diam aliquam volutpat. Praesent eget tellus sem. Morbi dictum pretium tempus. Fusce consequat posuere quam sit amet molestie. Nulla quis risus feugiat, convallis turpis at, laoreet ipsum. Fusce aliquam lorem sem.
+
+		Aenean commodo imperdiet turpis, eu fringilla libero. Nam vitae mi mauris. Suspendisse dictum tellus vel turpis pharetra dignissim. Cras mattis ullamcorper lorem, vitae lacinia massa faucibus suscipit. Ut aliquam quam ac arcu dictum consectetur. Nullam fringilla pretium tincidunt. Donec dapibus consequat est, ut maximus nibh dapibus nec. Quisque elementum, justo at pharetra posuere, ligula ex iaculis erat, eu iaculis tortor risus nec massa. Etiam et finibus nulla. Sed bibendum vehicula dolor, at dictum sapien bibendum ut. Mauris ex felis, rhoncus sit amet facilisis non, posuere ut nisl. Curabitur egestas, mauris vel vestibulum finibus, enim risus volutpat arcu, at eleifend felis lacus et orci.
+
+		In nec venenatis eros. Nam vestibulum tellus non porta ornare. Duis varius dolor sit amet quam posuere elementum. Donec accumsan metus quis odio pulvinar feugiat. Mauris molestie, nibh id efficitur aliquam, diam urna scelerisque eros, pellentesque tempus dui odio sed tellus. Aliquam feugiat purus a arcu mattis, sit amet varius neque ullamcorper. Vivamus vel facilisis nibh, vel bibendum lacus. Vivamus consectetur ex sed libero dignissim faucibus. Nam tempor turpis scelerisque ullamcorper feugiat.
+
+		Nulla eu cursus diam. Ut at fringilla nibh. Morbi non nisi urna. Curabitur ipsum felis, aliquam at velit in, viverra tristique lacus. Nulla facilisi. Vestibulum sollicitudin mi vel tortor egestas, ac aliquam justo condimentum. Vestibulum leo risus, elementum eget sem et, gravida scelerisque mauris. In arcu lectus, egestas ac eros eget, varius viverra erat. Suspendisse sollicitudin lacinia quam vel tempus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed commodo, urna eget euismod accumsan, lectus velit bibendum elit, ac bibendum velit augue quis augue. Donec laoreet posuere augue, vitae porta elit dignissim a. Integer varius dui vitae pretium varius.
+
+		Fusce sit amet nisi massa. Nam dapibus sagittis nisi, ut fringilla nunc suscipit ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vulputate, urna id congue tincidunt, magna urna condimentum elit, id malesuada justo nisi non tortor. Nullam sodales enim magna, nec ullamcorper nibh tristique a. Fusce maximus turpis eu risus mollis, quis sollicitudin quam dictum. Nulla sodales placerat vulputate. Fusce sit amet dui sit amet tellus tincidunt laoreet non eget metus. Praesent ac justo magna. Donec nisl dolor, convallis blandit nisl at, molestie sagittis ipsum. Nam arcu dolor, lacinia ac mattis eget, gravida in mi. Vivamus sit amet ante ac massa faucibus dignissim. Donec augue odio, eleifend sed maximus id, molestie eget nisi.Fusce sit amet nisi massa. Nam dapibus sagittis nisi, ut fringilla nunc suscipit ut. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis vulputate, urna id congue tincidunt, magna urna condimentum elit, id malesuada justo nisi non tortor. Nullam sodales enim magna, nec ullamcorper nibh tristique a. Fusce maximus turpis eu risus mollis, quis sollicitudin quam dictum. Nulla sodales placerat vulputate. Fusce sit amet dui sit amet tellus tincidunt laoreet non eget metus. Praesent ac justo magna. Donec nisl dolor, convallis blandit nisl at, molestie sagittis ipsum. Nam arcu dolor, lacinia ac mattis eget, gravida in mi. Vivamus sit amet ante ac massa faucibus dignissim. Donec augue odio, eleifend sed maximus id, molestie eget nisi.
+	</p>
+</div>
+<footer class=" site-footer navbar navbar-inverse navbar-fixed-bottom container-fluid">
+	<div id="theContent">
+		<div class="col-md-3 col-sm-3">
 
 		</div>
+		<div class="gridInfo col-md-3 col-sm-3">
+			<h5>Help & support</h5>
+			<ul >
+				<li><a href="#">Home</a></li>
+				<li><a href="#">How it works</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact US</a></li>
+			</ul>
+		</div>
 
-
-	</body>
+		<div class="gridInfo col-md-3 col-sm-3">
+			<h5>Social Media</h5>
+		</div>
+	</div>
+</footer>
+</body>
 </html>
+s

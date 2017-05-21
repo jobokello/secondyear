@@ -9,7 +9,7 @@ var marker = false; ////Has the user plotted their location marker?
 function initMap() {
 
     //The center location of our map.
-    var centerOfMap = new google.maps.LatLng(-1.4529685297655455, 36.97998046875);
+    var centerOfMap = new google.maps.LatLng(-0.5932511181408705, 37.68310546875);
 
     //Map options.
     var options = {
