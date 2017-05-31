@@ -8,7 +8,11 @@
         <link rel="stylesheet" href="../css/homepage.css">
         <link rel="stylesheet" href="../css/clientReg.css">
         <style type="text/css">
-          #map{ width:420px; height: 300px; }
+          #map{ 
+          	width: 500px; 
+          	height: 300px;
+          	border: 1px solid green;
+          }
         </style>
        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiBRKFRQvYcetiPIotdfje3IVhQRIHcOc" type="text/javascript"></script>
     </head>
@@ -40,7 +44,7 @@
                 <h4>Client Registration</h4>
                 <p>kindly enter the required personal information to register for our services</p>
                 <p>Each slot in the form below must be filled</p>
-                <form action="../php/insert.php" method="post">
+                <form action="../php/insertclient.php" method="post">
                     <fieldset>
                         <legend style="text-align: center">Personal info</legend>
                     <div class="form-group col-xs-3">

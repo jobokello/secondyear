@@ -48,7 +48,7 @@
                     <input type="text" class="form-control" id="fName" name="fName" autofocus required title="Please enter your first name">
                 </div>
                 <div class="form-group col-xs-3">
-                    <label for="sName">Second Name:</label>
+                    <label for="sName">last Name:</label>
                     <input type="text" class="form-control" id="sName" name="sName" required title="Please enter your second name">
                 </div>
                 <div class="form-group col-xs-6">

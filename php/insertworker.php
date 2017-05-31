@@ -13,11 +13,29 @@
 	    die("Connection failed: " . $conn->connect_error);
 	}
 
+		$fName = trim($_POST["fName"]);
+		$sName = trim($_POST["sName"]);
+		$username = trim($_POST["userName"]);
+		$natID = trim($_POST["natID"]);
+		$workerSkills = trim($_POST["workerSkills"]);
+		$tertiaryInstitution = trim($_POST["tertiaryInstitution"]);
+		$testimonial = trim($_POST["testimonial"]);
+		$email = trim($_POST["email"]);
+		$phone = trim($_POST["phone"]);
+		$county = trim($_POST["county"]);
+		$constituency = trim($_POST["constituency"]);
+		$workerPassWord = md5($_POST["workerPassWord"]);
+
 	$sql = "INSERT INTO myworkersinfo (fName, sName, userName, natID, workerSkills, tertiaryInstitution, testimonial, email, phone, county, constituency, workerPassWord)
-	    VALUES ('$_POST[fName]','$_POST[sName]','$_POST[userName]','$_POST[natID]','$_POST[workerSkills]','$_POST[tertiaryInstitution]','$_POST[testimonial]','$_POST[email]','$_POST[phone]','$_POST[county]','$_POST[constituency]','$_POST[workerPassWord]')";
+	    VALUES ('$fName','$sName','$username','$natID','$workerSkills','$tertiaryInstitution','$testimonial','$email','$phone','$county','$constituency',
+	    '$workerPassWord')";
+	    $uid = ($_POST['fName']);
 
 	if ($conn->query($sql) === TRUE) {
 	    echo "New record created successfully";
+	    session_start();
+	    $_SESSION['user'] = $uid;
+	    header("location: ../html/workerindex.php");
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}
