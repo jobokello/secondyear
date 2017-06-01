@@ -37,9 +37,11 @@
     <br>
     <br>
     <div class="col-sm-6 col-md-6">
-        <h4>Worker Registration</h4>
-        <p>kindly enter the required personal information to register for our services</p>
-        <p>Each slot in the form below must be filled</p>
+        <div align="center">
+            <h4>Worker Registration</h4>
+            <p>kindly enter the required personal information to register for our services</p>
+            <p>Each slot in the form below must be filled</p>
+        </div>
         <form action="../php/insertworker.php" method="post">
             <fieldset>
                 <legend style="text-align: center">Personal info</legend>
@@ -88,7 +90,7 @@
                 </div>
                 <div class="form-group col-xs-6">
                     <label for="phoneNo">Phone Number:</label>
-                    <input type="number" class="form-control" id="phoneNo" name="phone" minlength="10" maxlength="15" required title="Please enter phone number such as 07XX-XXXXXX">
+                    <input type="text" class="form-control" id="phoneNo" name="phone" minlength="10" maxlength="15" required title="Please enter phone number such as 07XX-XXXXXX">
                 </div>
                 <div class="form-group col-xs-6">
                     <label for="county">County:</label>
@@ -411,7 +413,9 @@
 
                 <br>
                 <br>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <div align="center">
+                    <button type="submit" class="btn btn-info btn-block">Register</button>
+                </div>
             </fieldset>
         </form>
         <script type="text/javascript" src="map.js"></script>

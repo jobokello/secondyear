@@ -9,8 +9,8 @@
         <link rel="stylesheet" href="../css/clientReg.css">
         <style type="text/css">
           #map{ 
-          	width: 500px; 
-          	height: 300px;
+          	width: 580px; 
+          	height: 350px;
           	border: 1px solid green;
           }
         </style>
@@ -41,9 +41,9 @@
         <br>
         <br>
             <div class="col-sm-6 col-md-6">
-                <h4>Client Registration</h4>
-                <p>kindly enter the required personal information to register for our services</p>
-                <p>Each slot in the form below must be filled</p>
+                <h4 align="center">Client Registration</h4>
+                <p align="center">kindly enter the required personal information to register for our services</p>
+                <p align="center">Each slot in the form below must be filled</p>
                 <form action="../php/insertclient.php" method="post">
                     <fieldset>
                         <legend style="text-align: center">Personal info</legend>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="form-group col-xs-6">
                         <label for="phoneNo">Phone Number:</label>
-                        <input type="number" class="form-control" id="phoneNo" name="phone" minlength="10" maxlength="15" required title="Please enter phone number such as 07XX-XXXXXX">
+                        <input type="text" class="form-control" id="phoneNo" name="phone" minlength="10" maxlength="15" required title="Please enter phone number such as 07XX-XXXXXX">
                     </div>
                     <div class="form-group col-xs-6">
                         <label for="county">County:</label>
@@ -401,7 +401,7 @@
                     </div>
                     <br>
                     <br>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="submit" class="btn btn-info btn-block">Register</button>
                     </fieldset>
                 </form>
                 <script type="text/javascript" src="map.js"></script>

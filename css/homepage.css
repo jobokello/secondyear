@@ -42,3 +42,7 @@ p a footer {
     font-size: 1.875em;
 }
 
+.userloggedin {
+    text-transform: uppercase;
+}
+

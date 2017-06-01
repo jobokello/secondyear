@@ -1,17 +1,17 @@
 <?php
-	include("workercheck.php");	
+	include("check.php");	
 ?>
 
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
+<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/homepage.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<title>worker account Home</title>
+	<title>User account Home</title>
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
@@ -37,9 +37,9 @@
 			<ul class="nav navbar-nav navbar-right">
 				<!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
 				<!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
-				<li><a title = "click to views your profile" href="#"><span class="glyphicon glyphicon-user"></span><span class="userloggedin"> <?php echo $login_user;?></span><span ></span></a>
+				<li><a title = "click to views your profile" href="#"><span class="glyphicon glyphicon-user"></span><span> <?php echo $login_user;?></span><span ></span></a>
 
-				<li><a href="workerlogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout<span></span></a></li>
+				<li><a href="workerlogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout<span></span></a>
 			</ul>
 		</div>
 	</div>
@@ -47,9 +47,9 @@
 </nav>
 <br/>
 <br/>
+<h1 class="hello">Hello <em><?php echo $login_user;?>!</em></h1>
 
-<h1 class="hello">Hello, <em><?php echo $login_user;?>!</em></h1>
-
+<a href="logout.php" style="font-size:18px">Logout?</a>
 
 <footer class=" site-footer navbar navbar-fixed-bottom navbar-inverse container-fluid">
     <div id="theContent">
