@@ -7,9 +7,17 @@ var marker = false; ////Has the user plotted their location marker?
 //Function called to initialize / create the map.
 //This is called when the page has loaded.
 function initMap() {
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+        var centerOfMap = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+    }else{
+        
+        var centerOfMap = new google.maps.LatLng(-0.5932511181408705, 37.68310546875);
+    }
 
     //The center location of our map.
-    var centerOfMap = new google.maps.LatLng(-0.5932511181408705, 37.68310546875);
+    
 
     //Map options.
     var options = {
