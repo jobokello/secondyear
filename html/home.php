@@ -1,6 +1,7 @@
 <?php
 	include("check.php");
 	include("../php/location.php");	
+	//include("../php/bookjob.php")
 ?>
 
 <!doctype html>
@@ -55,12 +56,15 @@
 </nav>
 <br/>
 <br/>
+<br/>
+<br/>
+<br/>
 <div class="container-fluid">
 	<div class="col-sm-6 col-md-6">
 		<h3 class="hello">Hello, <strong><?php echo $login_user;?>!</strong></h3>
 		<p>Kindly fill in the form with the details of your job specifications and we will try our best to link you to the closest individual with the required skills to help you out.</p>
 
-		<form name="booking" action="../php/bookjob.php" method="post">
+		<form action="../php/bookjob.php" method="post">
 		<fieldset>
 				<legend style="text-align: center">Booking Details</legend>
 				<div class="form-group col-xs-6">
@@ -93,10 +97,10 @@
 	            </div>
 	            <br/>
 	            <br/>
-	            <h5 align="center" class="error"><?php echo $error;?></h5>
+	            <!--<h5 align="center" class="error"><?php echo $error;?></h5>-->
 	            <br/>
 	            <br/>
-	            <button type="submit" class="btn btn-info btn-block">Confirm Booking</button>
+	            <button type="submit" name="submit" class="btn btn-info btn-block">Confirm Booking</button>
         </fieldset>
 		</form>
 		
