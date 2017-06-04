@@ -59,12 +59,12 @@
 		   		VALUES ('$clientID','$curruser','$clientFname','$clientSname','$clientEmail','$workerID','$workerFname','$workerSname','$workerEmail','$jobDescription',
 		   		'$jobDate','$clientLocLatitude','$clientLocLongitude','$clientPhone','$workerPhone')";
 
-		   		mysqli_query($db,$sql1);
+		   		mysqli_query($db,$sql);
 		   		if (mysqli_query($db,$sql1) == TRUE){
 		   			echo  "New record created successfully";
 
 		   		}else {
-		   			echo "Error: " . $sql1 . "<br>" . $db->error;
+		   			echo "Error: " . $sql . "<br>" . $db->error;
 		   		}
 
 
@@ -74,8 +74,6 @@
 
 		   		header("location: mailer.php");
 
-			} else { 
-				$error = "There is no existing worker in the system to match your job requirement.kindly try again after a short while";
 			}
 
 

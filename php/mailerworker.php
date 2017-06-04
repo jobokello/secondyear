@@ -43,7 +43,7 @@ $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, 
 $mail->Port = 465;                                    // TCP port to connect to
 
 $mail->setFrom('fundisfixem@gmail.com', 'admin');
-$mail->addAddress($clientEmail);     // Add a recipient
+$mail->addAddress($workerEmail);     // Add a recipient
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
@@ -52,8 +52,8 @@ $mail->addAddress($clientEmail);     // Add a recipient
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Job Order Received';
-$mail->Body    =  " dear $clientFname $clientSname this is to notify you that your order has been received and you will be served by $workerFname $workerSname on $jobDate for the following order description:<br>$jobDescription<br>https://www.google.com/maps/dir/?api=1&destination=$clientLocLatitude,$clientLocLongitude";
+$mail->Subject = 'New job booking';
+$mail->Body    =  "Dear $workerFname $workerSname this is to notify you that you have booked to work for $clientFname $clientSname on $jobDate for the following order description:<br>$jobDescription.<br>You can contact him/her on $clientPhone and also navigate to his premises using the following link:<br>https://www.google.com/maps/dir/?api=1&destination=$clientLocLatitude,$clientLocLongitude";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
@@ -61,6 +61,7 @@ if(!$mail->send()) {
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
     echo 'Message has been sent';
-    header("location: mailerworker.php");
+    header("location: ../html/home.php");
+    $error = "order delivered successfully";
 }
 ?>

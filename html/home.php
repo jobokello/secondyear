@@ -1,7 +1,7 @@
 <?php
 	include("check.php");
 	include("../php/location.php");	
-	//include("../php/bookjob.php")
+	//include("../mailerworker.php");
 ?>
 
 <!doctype html>
