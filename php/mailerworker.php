@@ -4,7 +4,7 @@ include('bookjob.php');
 
 			echo $curruser = $_SESSION['username'];
 
-			$sql = "SELECT clientID,clientFname,clientSname,clientEmail,workerID,workerFname,workerSname,workerEmail,jobDescription,jobDate,totalCost,clientLocLatitude,clientLocLongitude,clientPhone,workerPhone FROM tbljoborders WHERE clientUsername = '$curruser'";
+			$sql = "SELECT clientID,clientFname,clientSname,clientEmail,workerID,workerFname,workerSname,workerEmail,jobDescription,jobDate,totalCost,clientLocLatitude,clientLocLongitude,clientPhone,workerPhone FROM tbljoborders WHERE clientUsername = '$curruser' ORDER BY jobID DESC";
 
 			$result = mysqli_query($db,$sql);
 
@@ -53,7 +53,7 @@ $mail->addAddress($workerEmail);     // Add a recipient
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'New job booking';
-$mail->Body    =  "Dear $workerFname $workerSname this is to notify you that you have booked to work for $clientFname $clientSname on $jobDate for the following order description:<br>$jobDescription.<br>You can contact him/her on $clientPhone and also navigate to his premises using the following link:<br>https://www.google.com/maps/dir/?api=1&destination=$clientLocLatitude,$clientLocLongitude";
+$mail->Body    =  "Dear $workerFname $workerSname this is to notify you that you have booked to work for $clientFname $clientSname on $jobDate for the following order description:<br>$jobDescription. <br>You can contact him/her on $clientPhone and also navigate to his premises using the following link:<br>https://www.google.com/maps/dir/?api=1&destination=$clientLocLatitude,$clientLocLongitude";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
