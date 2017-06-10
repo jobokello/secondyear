@@ -55,9 +55,9 @@
 				echo $workerEmail=$row['email'];
 				echo $workerPhone=$row['phone']; 
 
-				$sql1 = "INSERT INTO tbljobOrders (clientID, clientUsername, clientFname, clientSname, clientEmail, workerID, workerFname, workerSname, workerEmail, jobDescription, jobDate, clientLocLatitude, clientLocLongitude, clientPhone, workerPhone)
+				$sql1 = "INSERT INTO tbljobOrders (clientID, clientUsername, clientFname, clientSname, clientEmail, workerID, workerFname, workerSname, workerEmail, jobDescription, jobDate,totalCost, clientLocLatitude, clientLocLongitude, clientPhone, workerPhone)
 		   		VALUES ('$clientID','$curruser','$clientFname','$clientSname','$clientEmail','$workerID','$workerFname','$workerSname','$workerEmail','$jobDescription',
-		   		'$jobDate','$clientLocLatitude','$clientLocLongitude','$clientPhone','$workerPhone')";
+		   		'$jobDate','$totalCost','$clientLocLatitude','$clientLocLongitude','$clientPhone','$workerPhone')";
 
 		   		mysqli_query($db,$sql);
 		   		if (mysqli_query($db,$sql1) == TRUE){

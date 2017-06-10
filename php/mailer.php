@@ -42,7 +42,7 @@ $mail->Password = 'workers2017';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 
-$mail->setFrom('fundisfixem@gmail.com', 'admin');
+$mail->setFrom('fundisfixem@gmail.com', 'The Fundis');
 $mail->addAddress($clientEmail);     // Add a recipient
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
@@ -53,7 +53,8 @@ $mail->addAddress($clientEmail);     // Add a recipient
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Job Order Received';
-$mail->Body    =  " dear $clientFname $clientSname this is to notify you that your order has been received and you will be served by $workerFname $workerSname on $jobDate for the following order description:<br>$jobDescription<br>https://www.google.com/maps/dir/?api=1&destination=$clientLocLatitude,$clientLocLongitude";
+$mail->Body    =  "<br>Dear $clientFname $clientSname this is to notify you that your order has been received and you will be served by $workerFname $workerSname on $jobDate for the following order description:<br>$jobDescription. <br>Kinldly Finish your payment from your order to be processed completely. Once your order has been completed you will be required to login to  your account and comfirm the order delivery. You are also only allowed to cancel atleast a day prior to your mentioned order date.<br>Feel free to contact us with any complaints and quetsions.<br>Regards<br>
+The Fundis.";
 $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
 if(!$mail->send()) {
