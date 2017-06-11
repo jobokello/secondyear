@@ -56,11 +56,11 @@
 				echo $workerEmail=$row['email'];
 				echo $workerPhone=$row['phone']; 
 
-				$sql1 = "INSERT INTO tbljobOrders (clientID, clientUsername, clientFname, clientSname, clientEmail, workerID,workerUsername, workerFname, workerSname, workerEmail, jobDescription, jobDate,totalCost, clientLocLatitude, clientLocLongitude, clientPhone, workerPhone)
+				$sql = "INSERT INTO tbljobOrders (clientID, clientUsername, clientFname, clientSname, clientEmail, workerID,workerUsername, workerFname, workerSname, workerEmail, jobDescription, jobDate,totalCost, clientLocLatitude, clientLocLongitude, clientPhone, workerPhone)
 		   		VALUES ('$clientID','$curruser','$clientFname','$clientSname','$clientEmail','$workerID','$workerUsername','$workerFname','$workerSname','$workerEmail','$jobDescription',
 		   		'$jobDate','$totalCost','$clientLocLatitude','$clientLocLongitude','$clientPhone','$workerPhone')";
 
-		   		mysqli_query($db,$sql1);
+		   		mysqli_query($db,$sql);
 		   		if (mysqli_query($db,$sql) == TRUE){
 		   			echo  "New record created successfully";
 
