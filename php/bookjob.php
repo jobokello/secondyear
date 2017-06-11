@@ -31,7 +31,7 @@
 			echo $clientLocLatitude=$row['latitude'];
 			echo $clientLocLongitude=$row['longitude'];
 
-			$sql = "SELECT workerID, fName, sName, email, phone FROM myworkersinfo WHERE workerSkills='$workerSkills' AND (county = '$county' OR constituency='$constituency') ORDER BY jobCount ASC LIMIT 1";
+			$sql = "SELECT workerID, fName, sName, username, email, phone FROM myworkersinfo WHERE workerSkills='$workerSkills' AND (county = '$county' OR constituency='$constituency') ORDER BY jobCount ASC LIMIT 1";
 
 			/*$sql = "SELECT workerID, fName, sName, email, phone FROM myworkersinfo WHERE workerSkills='Painter' AND (county = 'Nairobi' OR constituency='Parklands') ORDER BY jobCount ASC LIMIT 1";*/
 			
@@ -52,15 +52,16 @@
 				echo $workerID=$row['workerID'];
 				echo $workerFname=$row['fName'];
 				echo $workerSname=$row['sName'];
+				echo $workerUsername=$row['workerUsername'];
 				echo $workerEmail=$row['email'];
 				echo $workerPhone=$row['phone']; 
 
-				$sql1 = "INSERT INTO tbljobOrders (clientID, clientUsername, clientFname, clientSname, clientEmail, workerID, workerFname, workerSname, workerEmail, jobDescription, jobDate,totalCost, clientLocLatitude, clientLocLongitude, clientPhone, workerPhone)
-		   		VALUES ('$clientID','$curruser','$clientFname','$clientSname','$clientEmail','$workerID','$workerFname','$workerSname','$workerEmail','$jobDescription',
+				$sql1 = "INSERT INTO tbljobOrders (clientID, clientUsername, clientFname, clientSname, clientEmail, workerID,workerUsername, workerFname, workerSname, workerEmail, jobDescription, jobDate,totalCost, clientLocLatitude, clientLocLongitude, clientPhone, workerPhone)
+		   		VALUES ('$clientID','$curruser','$clientFname','$clientSname','$clientEmail','$workerID','$workerUsername','$workerFname','$workerSname','$workerEmail','$jobDescription',
 		   		'$jobDate','$totalCost','$clientLocLatitude','$clientLocLongitude','$clientPhone','$workerPhone')";
 
-		   		mysqli_query($db,$sql);
-		   		if (mysqli_query($db,$sql1) == TRUE){
+		   		mysqli_query($db,$sql1);
+		   		if (mysqli_query($db,$sql) == TRUE){
 		   			echo  "New record created successfully";
 
 		   		}else {

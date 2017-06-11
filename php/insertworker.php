@@ -25,10 +25,12 @@
 		$county = trim($_POST["county"]);
 		$constituency = trim($_POST["constituency"]);
 		$workerPassWord = md5($_POST["workerPassWord"]);
+		$securityQuestion = trim($_POST["securityQuestion"]);
+		$securityAnswer = md5($_POST["securityAnswer"]);
 
-	$sql = "INSERT INTO myworkersinfo (fName, sName, userName, natID, workerSkills, tertiaryInstitution, testimonial, email, phone, county, constituency, workerPassWord)
+	$sql = "INSERT INTO myworkersinfo (fName, sName, userName, natID, workerSkills, tertiaryInstitution, testimonial, email, phone, county, constituency, workerPassWord, securityQuestion, securityAnswer)
 	    VALUES ('$fName','$sName','$username','$natID','$workerSkills','$tertiaryInstitution','$testimonial','$email','$phone','$county','$constituency',
-	    '$workerPassWord')";
+	    '$workerPassWord','$securityQuestion','$securityAnswer')";
 	    $uid = ($_POST['fName']);
 
 	if ($conn->query($sql) === TRUE) {

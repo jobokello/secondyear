@@ -30,7 +30,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Book Job</a></li>
-				<li><a href="#">Orders and Confirmations</a></li>
+				<li><a href="workerpendingjobs.php">Orders and Confirmations</a></li>
 				<li><a href="#">about Us</a></li>
 				<li><a href="#">Contact Us</a></li>
 			</ul>

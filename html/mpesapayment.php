@@ -98,25 +98,25 @@
         </fieldset>
 		</form>
 	
-</form>
-<footer class=" site-footer navbar navbar-fixed-bottom navbar-inverse container-fluid">
-    <div id="theContent">
-        <div class="col-md-12 col-sm-12">
+	<footer class=" site-footer navbar navbar-fixed-bottom navbar-inverse container-fluid">
+	    <div id="theContent">
+	        <div class="col-md-12 col-sm-12">
 
-        </div>
-        <div class="gridInfo col-md-3 col-sm-3">
-            <h5>Help & support</h5>
-            <ul >
-                <li><a href="#">Home</a></li>
-                <li><a href="#">How it works</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact US</a></li>
-                <li><a target= "_blank" href="https://www.google.com/maps/dir/?api=1&destination= <?php echo $latitude;?>,<?php echo $longitude;?>">direction</a></li>
-            </ul>
-        </div>
+	        </div>
+	        <div class="gridInfo col-md-3 col-sm-3">
+	            <h5>Help & support</h5>
+	            <ul >
+	                <li><a href="#">Home</a></li>
+	                <li><a href="#">How it works</a></li>
+	                <li><a href="#">About Us</a></li>
+	                <li><a href="#">Contact US</a></li>
+	                <li><a target= "_blank" href="https://www.google.com/maps/dir/?api=1&destination= <?php echo $latitude;?>,<?php echo $longitude;?>">direction</a></li>
+	            </ul>
+	        </div>
 
-        <div class="gridInfo col-md-3 col-sm-3">
-            <h5>Social Media</h5>
-        </div>
-    </div>
-</footer>
+	        <div class="gridInfo col-md-3 col-sm-3">
+	            <h5>Social Media</h5>
+	        </div>
+	    </div>    
+	</footer>
+</div>

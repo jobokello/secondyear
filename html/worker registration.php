@@ -90,7 +90,7 @@
                 </div>
                 <div class="form-group col-xs-6">
                     <label for="phoneNo">Phone Number:</label>
-                    <input type="text" class="form-control" id="phoneNo" name="phone" minlength="10" maxlength="15" required title="Please enter phone number such as 07XX-XXXXXX">
+                    <input type="text" class="form-control" id="phoneNo" name="phone" minlength="10" maxlength="10" required title="Please enter phone number such as 07XX-XXXXXX">
                 </div>
                 <div class="form-group col-xs-6">
                     <label for="county">County:</label>
@@ -407,6 +407,27 @@
                     <label for="passWord">Password:</label>
                     <input type="password" class="form-control" id="passWord" name="workerPassWord" required title="please enter a preferred user password">
                 </div>
+                <div class="form-group col-xs-9">
+                        <label for="securityQuestion">Secuity question:</label>
+                        <select class="form-control" id="securityQuestion" name="securityQuestion" required title="Please enter your first name">
+                            <option>What was the house number and street name you lived in as a child?</option>
+                            <option>What were the last four digits of your childhood telephone number?</option>
+                            <option>What primary school did you attend?</option>
+                            <option>In what town or city was your first full time job?</option>
+                            <option>In what town or city did you meet your spouse/partner?</option>
+                            <option>What is the middle name of your oldest child?</option>
+                            <option>What are the last five digits of your driver's licence number?</option>
+                            <option>What is your grandmother's (on your mother's side) maiden name?</option>
+                            <option>What is your spouse or partner's mother's maiden name?</option>
+                            <option>In what town or city did your mother and father meet?</option>
+                            <option>What time of the day were you born? (hh:mm)</option>
+                            <option>What time of the day was your first child born? (hh:mm)</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-xs-3">
+                        <label for="securityAnswer">Answer:</label>
+                        <input type="text" class="form-control" id="securityAnswer" name="securityAnswer" required title="Please enter a secure answer for your security question.">
+                    </div>
                 <br>
                 <br>
                 <div class="clearfix"></div>

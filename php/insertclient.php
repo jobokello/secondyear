@@ -22,13 +22,15 @@ if ($conn->connect_error) {
 		$county = trim($_POST["county"]);
 		$constituency = trim($_POST["constituency"]);
 		$clientPassWord = md5($_POST["clientPassWord"]);
+		$securityQuestion = trim($_POST["securityQuestion"]);
+		$securityAnswer = md5($_POST["securityAnswer"]);
 		$latitude = $_POST["latitude"];
 		$longitude = $_POST["longitude"];
 
 
-	$sql = "INSERT INTO myclientInfo (fName, sName, userName, email, phone, county, constituency, clientPassWord, latitude, longitude)
+	$sql = "INSERT INTO myclientInfo (fName, sName, userName, email, phone, county, constituency, clientPassWord, securityQuestion, securityAnswer, latitude, longitude)
 	    VALUES ('$fName','$sName','$username','$email','$phone','$county','$constituency',
-	    '$clientPassWord','$latitude','$longitude')";
+	    '$clientPassWord','$securityQuestion','$securityAnswer','$latitude','$longitude')";
 
 	if ($conn->query($sql) === TRUE) {
 	    echo "New record created successfully";

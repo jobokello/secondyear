@@ -39,7 +39,7 @@
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
 				<li><a href="../index.html">Home</a></li>
-				<li><a href="#">Orders and Confirmations</a></li>
+				<li><a href="clientpendingjobs.php">Orders and Confirmations</a></li>
 				<li><a href="#">about Us</a></li>
 				<li><a href="#">Contact Us</a></li>
 			</ul>
