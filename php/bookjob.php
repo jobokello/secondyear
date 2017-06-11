@@ -52,7 +52,7 @@
 				echo $workerID=$row['workerID'];
 				echo $workerFname=$row['fName'];
 				echo $workerSname=$row['sName'];
-				echo $workerUsername=$row['workerUsername'];
+				echo $workerUsername=$row['username'];
 				echo $workerEmail=$row['email'];
 				echo $workerPhone=$row['phone']; 
 
@@ -60,7 +60,8 @@
 		   		VALUES ('$clientID','$curruser','$clientFname','$clientSname','$clientEmail','$workerID','$workerUsername','$workerFname','$workerSname','$workerEmail','$jobDescription',
 		   		'$jobDate','$totalCost','$clientLocLatitude','$clientLocLongitude','$clientPhone','$workerPhone')";
 
-		   		mysqli_query($db,$sql);
+		   		//mysqli_query($db,$sql);
+		   		//the above commented out query caused a double entry in the database
 		   		if (mysqli_query($db,$sql) == TRUE){
 		   			echo  "New record created successfully";
 
@@ -70,8 +71,8 @@
 
 
 
-		   		$sql2 = "Update myworkersinfo set jobCount = jobCount + 1 where workerID = '$workerID'";
-		   		mysqli_query($db,$sql2);
+		   		$sql = "Update myworkersinfo set jobCount = jobCount + 1 where workerID = '$workerID'";
+		   		mysqli_query($db,$sql);
 
 		   		header("location: mailer.php");
 

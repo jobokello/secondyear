@@ -1,6 +1,6 @@
 <?php
 require '../PHPMailer/PHPMailerAutoload.php';
-include('../html/login.php');
+include('bookjob.php');
 
 			echo $curruser = $_SESSION['username'];
 
