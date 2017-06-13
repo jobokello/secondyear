@@ -5,7 +5,7 @@ echo $curruser = $_SESSION['username'];
 
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
-$sql = "SELECT jobID, workerFname, workerSname, jobDescription, jobDate, totalCost, clientJobStatus FROM tbljoborders WHERE clientUsername='$curruser' AND (clientJobStatus ='pending' OR workerJobStatus = 'pending') ORDER BY jobID DESC"; // using mysqli_query instead
+$sql = "SELECT jobID, workerFname, workerSname, jobDescription, jobDate, totalCost, clientJobStatus FROM tbljoborders WHERE clientUsername='$curruser' AND (clientJobStatus ='pending' OR workerJobStatus = 'pending' OR clientJobStatus ='confirmed' OR workerJobStatus = 'confirmed') ORDER BY jobID DESC"; // using mysqli_query instead
 	$result= mysqli_query($db,$sql);
 ?>
 <!DOCTYPE html>
