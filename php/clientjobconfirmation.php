@@ -76,8 +76,8 @@ echo $id = $_GET['id'];
                   //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
                   $mail->isHTML(true);                                  // Set email format to HTML
 
-                  $mail->Subject = 'Order cancelled';
-                  $mail->Body    =  "<br>Dear $clientFname $clientSname this is to notify you that you order number: $jobID which was scheduled for $jobDate with the description $jobDescription has been cancelled. Your refund of Ksh.$totalCost is being processed and will issued out in the next 48 hours.<br>Feel free to contact us with any complaints and quetsions.<br>Regards<br>
+                  $mail->Subject = 'Successful Order Delivery';
+                  $mail->Body    =  "<br>Dear $clientFname $clientSname this is to notify you that you order number: $jobID which was scheduled for $jobDate with the description $jobDescription has been successfully delivered to you by $workerFname $workerSname.<br>We thank you for giving us the chance to serve you.<br>Feel free to contact us with any complaints and quetsions.<br>Regards<br>
                   The Fundis.";
                   $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -110,8 +110,8 @@ echo $id = $_GET['id'];
                     //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
                     $mail->isHTML(true);                                  // Set email format to HTML
 
-                    $mail->Subject = 'Job Order cancelled by client';
-                    $mail->Body    =  "<br>Dear $workerFname $workerFname this is to notify you that the order number: $jobID by $clientFname $clientSname which was scheduled for $jobDate with the description $jobDescription has been cancelled.<br>Regards<br>
+                    $mail->Subject = 'Completion of job';
+                    $mail->Body    =  "<br>Dear $workerFname $workerFname we are writing to acknowledge your successful delivery of the order number: $jobID by $clientFname $clientSname which was scheduled for $jobDate with the description: $jobDescription.<br>Your payment is being processed and will be disbursed within the next 24hrs.<br>The fundis would like to thank you for being part of the workforce and delivery team. We are looking forward to working with you again<br>Regards<br>
                     The Fundis.";
                     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
@@ -129,6 +129,7 @@ echo $id = $_GET['id'];
                }
             }else{
               echo "Error: " . $sql1 . "<br>" . $db->error;
+              header("location: ../html/clientpendingjobs.php");
             } 
       }
       else
