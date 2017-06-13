@@ -7,7 +7,7 @@ $sql = "update tbljobOrders set workerJobStatus ='cancelled' WHERE jobID ='$id'"
 		   		mysqli_query($db,$sql);
 		   		if (mysqli_query($db,$sql) == TRUE){
 		   			echo  "New record created successfully";
-		   			//header("location: ../html/home.php");
+		   			header("location: ../html/workerpendingjobs.php");
 
 		   		}else {
 		   			echo "Error: " . $sql . "<br>" . $db->error;

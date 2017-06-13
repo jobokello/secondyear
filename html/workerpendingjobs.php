@@ -5,7 +5,7 @@ echo $curruser = $_SESSION['username'];
 
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
-$sql = "SELECT jobID,jobDescription, jobDate, totalCost FROM tbljoborders WHERE workerUsername='$curruser' AND (clientJobStatus ='pending' OR workerJobStatus = 'pending') ORDER BY jobID DESC"; // using mysqli_query instead
+$sql = "SELECT jobID, clientFname, clientSname, jobDescription, jobDate, totalCost, workerJobStatus FROM tbljoborders WHERE workerUsername='$curruser' AND (clientJobStatus ='pending' OR workerJobStatus = 'pending') ORDER BY jobID DESC"; // using mysqli_query instead
 	$result= mysqli_query($db,$sql);
 ?>
 <!DOCTYPE html>
@@ -66,6 +66,7 @@ $sql = "SELECT jobID,jobDescription, jobDate, totalCost FROM tbljoborders WHERE 
 
 	<tr bgcolor='#CCCCCC'>
 		<td>Order number</td>
+		<td colspan="2">Customer served</td>
 		<td>Description </td>
 		<td>Date</td>
 		<td>Cost</td>
@@ -76,9 +77,12 @@ $sql = "SELECT jobID,jobDescription, jobDate, totalCost FROM tbljoborders WHERE 
 	while($res = mysqli_fetch_array($result)) { 		
 		echo "<tr>";
 		echo "<td width='10%'>".$res['jobID']."</td>";
+		echo "<td>".$res['clientFname']."</td>";
+		echo "<td>".$res['clientSname']."</td>";
 		echo "<td>".$res['jobDescription']."</td>";
 		echo "<td>".$res['jobDate']."</td>";
-		echo "<td>".$res['totalCost']."</td>";	
+		echo "<td>".$res['totalCost']."</td>";
+		echo "<td>".$res['workerJobStatus']."</td>";	
 		echo "<td><a href=\"../php/workerjobconfirmation.php?id=$res[jobID]\">Job done</a> | <a href=\"../php/workerjobcancellation.php?id=$res[jobID]\" onClick=\"return confirm('Are you sure you want to cancel the job?')\">Cancel job order</a></td>";
 		echo "</tr>";		
 	}
