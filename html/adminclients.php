@@ -41,7 +41,7 @@ tr:nth-child(even) {
 }
 	</style>
 	<link rel="stylesheet" href="style.css" type="text/css" />
-	<title>Admin Users</title>
+	<title>Admin Clients</title>
 </head>
 
 <body>

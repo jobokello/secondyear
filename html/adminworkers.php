@@ -30,7 +30,7 @@ $sql1 = "SELECT workerID, fName, sName, username, natID, workerSkills, tertiaryI
 }
 
 td, th {
-    border: 0px solid #dddddd !important;
+    border: 1px solid #dddddd !important;
     text-align: center !important;
     padding: 8px !important;
 
@@ -41,7 +41,7 @@ tr:nth-child(even) {
 }
 	</style>
 	<link rel="stylesheet" href="style.css" type="text/css" />
-	<title>Admin Users</title>
+	<title>Admin Workers</title>
 </head>
 
 <body>

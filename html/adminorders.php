@@ -4,7 +4,7 @@ include_once("connection.php");
 
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
-$sql1 = "SELECT workerID, fName, sName, username, natID, workerSkills, tertiaryInstitution, testimonial, email, phone, county, constituency, workerPassWord, securityQuestion, securityAnswer, jobCount FROM myworkersinfo ORDER BY workerID ASC"; // using mysqli_query instead
+$sql1 = "SELECT jobID, clientID, clientUsername, clientFname, clientSname, clientEmail, workerID, workerUsername, workerFname, workerSname, workerEmail, jobDescription, jobDate, totalCost, paymentCode, clientLocLatitude, clientLocLongitude, clientJobStatus, workerJobStatus, clientPhone, workerPhone FROM tbljoborders ORDER BY workerID ASC"; // using mysqli_query instead
 	$result= mysqli_query($db,$sql1);
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ $sql1 = "SELECT workerID, fName, sName, username, natID, workerSkills, tertiaryI
 }
 
 td, th {
-    border: 0px solid #dddddd !important;
+    border: 1px solid #dddddd !important;
     text-align: center !important;
     padding: 8px !important;
 
@@ -41,7 +41,7 @@ tr:nth-child(even) {
 }
 	</style>
 	<link rel="stylesheet" href="style.css" type="text/css" />
-	<title>Admin Users</title>
+	<title>Admin Orders</title>
 </head>
 
 <body>
@@ -85,7 +85,7 @@ tr:nth-child(even) {
 					    <span class="caret"></span>
 					  </button>
 					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					    <li><a href="#">Add Worker</a></li>
+					    <li><a href="#">Add Order</a></li>
 					    <li role="separator" class="divider"></li>
 					    <li><a href="adminpanel.php">Back to home page</a></li>
 					  </ul>
@@ -101,45 +101,53 @@ tr:nth-child(even) {
 <!--<a href="add.html">Add New Data</a><br/><br/>-->
 	<!--<legend style="text-align: center; position: relative;">Clients List</legend>-->
 	<table width='100%' style="border: ">
-		<caption><legend style="text-align: center; position: relative;">Workers List</legend></caption>
+		<caption><legend style="text-align: center; position: relative;">Orders List</legend></caption>
 	<tr bgcolor='#CCCCCC'>
-		<th>Worker ID</td>
-		<th colspan="2">Worker Names</td>
-		<th>Username</td>
-		<th>National ID no.</td>
-		<th>Skills</td>
-		<th>Institution attended</td>
-		<th>Testimonial Document</td>
-		<th>email address</td>
-		<th>Phone no.</td>
-		<th>County</td>
-		<th>Constituency</td>
-		<th>Password</td>
-		<th>Security Question</td>
-		<th>Security Answer</td>
-		<th>Job Count</td>
+		<th>jobID</td>
+		<th>Client's ID</td>
+		<th>Client's Username</td>
+		<th colspan="2">client's name</td>
+		<th>Client's Email</td>
+		<th>WorkerID</td>
+		<th>Worker's Username</td>
+		<th colspan="2">Worker's Name</td>
+		<th>Worker Email</td>
+		<th>Description</td>
+		<th>Date</td>
+		<th>Cost</td>
+		<th>M-pesa Code</td>
+		<th colspan="2">Client coordinates</td>
+		<th>client Job Status</td>
+		<th>worker Job Status</td>
+		<th>Client Phone no.</td>
+		<th>Worker Phone</td>
 		<th colspan="2">options</td>
 	</tr>
 	<?php 
 	//while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
 	while($res = mysqli_fetch_array($result)) { 		
 		echo "<tr>";
-		echo "<td width='20%'>".$res['workerID']."</td>";
-		echo "<td width='20%'>".$res['fName']."</td>";
-		echo "<td width='20%'>".$res['sName']."</td>";
-		echo "<td width='20%'>".$res['username']."</td>";
-		echo "<td width='20%'>".$res['natID']."</td>";
-		echo "<td width='20%'>".$res['workerSkills']."</td>";
-		echo "<td width='20%'>".$res['tertiaryInstitution']."</td>";
-		echo "<td width='20%'>".$res['testimonial']."</td>";	
-		echo "<td>".$res['email']."</td>";	
-		echo "<td width='30%'>".$res['phone']."</td>";	
-		echo "<td>".$res['county']."</td>";	
-		echo "<td>".$res['constituency']."</td>";
-		echo "<td>".$res['workerPassWord']."</td>";
-		echo "<td>".$res['securityQuestion']."</td>";	
-		echo "<td>".$res['securityAnswer']."</td>";	
-		echo "<td>".$res['jobCount']."</td>";				
+		echo "<td>".$res['jobID']."</td>";
+		echo "<td>".$res['clientID']."</td>";
+		echo "<td>".$res['clientUsername']."</td>";
+		echo "<td>".$res['clientFname']."</td>";
+		echo "<td>".$res['clientSname']."</td>";
+		echo "<td>".$res['clientEmail']."</td>";
+		echo "<td>".$res['workerID']."</td>";
+		echo "<td>".$res['workerUsername']."</td>";	
+		echo "<td>".$res['workerFname']."</td>";	
+		echo "<td>".$res['workerSname']."</td>";	
+		echo "<td>".$res['workerEmail']."</td>";	
+		echo "<td>".$res['jobDescription']."</td>";
+		echo "<td>".$res['jobDate']."</td>";
+		echo "<td>".$res['totalCost']."</td>";	
+		echo "<td>".$res['paymentCode']."</td>";	
+		echo "<td>".$res['clientLocLatitude']."</td>";
+		echo "<td>".$res['clientLocLongitude']."</td>";
+		echo "<td>".$res['clientJobStatus']."</td>";
+		echo "<td>".$res['workerJobStatus']."</td>";
+		echo "<td>".$res['clientPhone']."</td>";
+		echo "<td>".$res['workerPhone']."</td>";				
 		echo "<td width='30'><a href=\"../php/clientjobconfirmation.php?id=$res[workerID]\">Edit</a> | <a href=\"../php/clientjobcancellation.php?id=$res[workerID]\" onClick=\"return confirm('Are you sure you want to cancel the and get a refund?')\">Delete</a></td>";
 		echo "</tr>";		
 	}/*else{
