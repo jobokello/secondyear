@@ -1,3 +1,63 @@
+<?php
+	include("connection.php");
+	if ($result = mysqli_query($db, "SELECT * FROM myclientinfo")) {
+
+    /* determine number of rows result set */
+    $row_clients = mysqli_num_rows($result);
+
+    printf("Result set has %d rows.\n", $row_clients);
+
+    /* close result set */
+    mysqli_free_result($result);
+}
+
+if ($result = mysqli_query($db, "SELECT * FROM myworkersinfo")) {
+
+    /* determine number of rows result set */
+    $row_workers = mysqli_num_rows($result);
+
+    printf("Result set has %d rows.\n", $row_workers);
+
+    /* close result set */
+    mysqli_free_result($result);
+}
+
+if ($result = mysqli_query($db, "SELECT * FROM tbljoborders")) {
+
+    /* determine number of rows result set */
+    $row_orders = mysqli_num_rows($result);
+
+    printf("Result set has %d rows.\n", $row_orders);
+
+    /* close result set */
+    mysqli_free_result($result);
+}
+
+if ($result = mysqli_query($db, "SELECT * FROM tblrefunds")) {
+
+    /* determine number of rows result set */
+    $row_refunds = mysqli_num_rows($result);
+
+    printf("Result set has %d rows.\n", $row_refunds);
+
+    /* close result set */
+    mysqli_free_result($result);
+}
+
+if ($result = mysqli_query($db, "SELECT * FROM tblpayment")) {
+
+    /* determine number of rows result set */
+    $row_payments = mysqli_num_rows($result);
+
+    printf("Result set has %d rows.\n", $row_payments);
+
+    /* close result set */
+    mysqli_free_result($result);
+}
+$refundpercent=($row_refunds/$row_orders)*100;
+$paymentpercent=($row_payments/$row_orders)*100;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -92,23 +152,24 @@
 			<div class="row">
 			<div class="col-md-3">
 				<div class="list-group">
-				  <a href="adminclients.php" class="list-group-item active main-color-bg"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> clients <span class="badge">12</span></a>
-				  <a href="adminworkers.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Workers<span class="badge">13</span></a>
-				  <a href="adminorders.php" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Orders <span class="badge">42</span></a>
-				  <a href="adminwages.php" class="list-group-item"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Wage payment <span class="badge">7</span></a>
-				  <a href="adminrefunds.php" class="list-group-item"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Client Refunds <span class="badge">2</span></a>
+				  <a href="adminclients.php" class="list-group-item active main-color-bg"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> clients <span class="badge"><?php echo $row_clients;?></span></a>
+				  <a href="adminworkers.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Workers<span class="badge"><?php echo $row_workers;?></span></a>
+				  <a href="adminorders.php" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Orders <span class="badge"><?php echo $row_orders;?></span></a>
+				  <a href="adminwages.php" class="list-group-item"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Wage payment <span class="badge"><?php echo $row_payments;?></span></a>
+				  <a href="adminrefunds.php" class="list-group-item"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Client Refunds <span class="badge"><?php echo $row_refunds;?></span></a>
 				</div>
 				<div class="well">
+					<h4>Financial Analysis</h4>
 					<h5>Payment against job orders</h5>
 					<div class="progress">
-					  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-					    60%
+					  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $paymentpercent;?>%;">
+					    <?php echo $paymentpercent;?>%
 					  </div>
 					</div>
 					<h5>Refunds against job orders</h5>
 					<div class="progress">
-					  <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
-					    10%
+					  <div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $refundpercent;?>%;">
+					    <?php echo $refundpercent;?>%
 					  </div>
 					</div>
 				</div>
@@ -121,37 +182,37 @@
 				  <div class="panel-body">
 				    <div class="col-md-3">
 				    	<div class="well dash-box">
-				    		<h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span>12</h2>
+				    		<h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span><?php echo $row_clients;?></h2>
 				    		<h4>Clients</h4>
 				    	</div>
 				    </div>
 				    <div class="col-md-4">
 				    	<div class="well dash-box">
-				    		<h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span>13</h2>
+				    		<h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span><?php echo $row_workers;?></h2>
 				    		<h4>Workers</h4>
 				    	</div>
 				    </div>
 				    <div class="col-md-4">
 				    	<div class="well dash-box">
-				    		<h2><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>65</h2>
+				    		<h2><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>203</h2>
 				    		<h4>Website visits</h4>
 				    	</div>
 				    </div>
 				    <div class="col-md-4">
 				    	<div class="well dash-box">
-				    		<h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>45</h2>
+				    		<h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><?php echo $row_orders;?></h2>
 				    		<h4>Orders Placed</h4>
 				    	</div>
 				    </div>
 				    <div class="col-md-4">
 				    	<div class="well dash-box">
-				    		<h2><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>38</h2>
-				    		<h4>Paymenst Made</h4>
+				    		<h2><span class="glyphicon glyphicon-usd" aria-hidden="true"></span><?php echo $row_payments;?></h2>
+				    		<h4>Payments Made</h4>
 				    	</div>
 				    </div>
 				    <div class="col-md-4">
 				    	<div class="well dash-box">
-				    		<h2><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>4</h2>
+				    		<h2><span class="glyphicon glyphicon-usd" aria-hidden="true"></span><?php echo $row_refunds;?></h2>
 				    		<h4>Refunds Given</h4>
 				    	</div>
 				    </div>

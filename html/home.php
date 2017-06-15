@@ -2,6 +2,17 @@
 	include("check.php");
 	include("../php/location.php");	
 	//include("../mailerworker.php");
+
+	if ($result = mysqli_query($db, "SELECT * FROM tbljoborders WHERE clientJobStatus='pending' AND clientUsername='$login_user'")) {
+
+    /* determine number of rows result set */
+    $row_cnt = mysqli_num_rows($result);
+
+    printf("Result set has %d rows.\n", $row_cnt);
+
+    /* close result set */
+    mysqli_free_result($result);
+}
 ?>
 
 <!doctype html>
@@ -39,12 +50,12 @@
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
 				<li><a href="../index.html">Home</a></li>
-				<li><a href="clientpendingjobs.php">Orders and Confirmations</a></li>
+				<li><a href="clientpendingjobs.php">Orders and Confirmations <span class="badge"><?php echo $row_cnt;?></span></a></li>
 				<li><a href="#">about Us</a></li>
 				<li><a href="#">Contact Us</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
 				<!--<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>-->
 				<li><a title = "click to views your profile" href="#"><span class="glyphicon glyphicon-user"></span><span class="userloggedin"><strong> <?php echo $login_user;?></strong></span><span ></span></a></li>
 
@@ -69,18 +80,17 @@
 				<legend style="text-align: center">Booking Details</legend>
 				<div class="form-group col-xs-6">
                     <label for="workerSkills">Skills Category:</label>
-                    <input list="workerSkills" class="form-control"  id ="workerSkills" name="workerSkills" required  autofocus title="Please enter your your skill category" onchange="pricefix();">
-                    <datalist id="workerSkills">
-                        <option value="Carpenter">
-                        <option value="Cleaner">
-                        <option value="Electrician">
-                        <option value="Plumber">
-                        <option value="Mechanic">
-                        <option value="Painter">
-                        <option value="Welder">
-                        <option value="Gardener/Landscape artist">
-                        <option value="Car driver">
-                    </datalist>
+                    <select id="workerSkills" class="form-control"  id ="workerSkills" name="workerSkills" required  autofocus title="Please enter your your skill category" onchange="pricefix();">
+                        <option value="Carpenter">Carpenter</option>
+                        <option value="Cleaner">House Cleaner</option>
+                        <option value="Electrician">Electrician</option>
+                        <option value="Plumber">Plumber</option>
+                        <option value="Mechanic">Mechanic</option>
+                        <option value="Painter">Painter</option>
+                        <option value="Welder">Welder</option>
+                        <option value="Gardener/Landscape artist">Gardener/Landscape artist</option>
+                        <option value="Car driver">Car driver</option>
+                    </select>
                  </div>  
 	            <div class="form-group col-md-6 col-sm-6 col-xs-6">
 	                <label for="jobDescription">Job Description:</label>
@@ -193,6 +203,7 @@
 			        wages.value = price;
 			    }
         	};
+
 
 </script>
 </body>

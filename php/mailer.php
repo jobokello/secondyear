@@ -27,6 +27,9 @@ include('bookjob.php');
 			echo $clientLocLongitude = $row['clientLocLongitude'];
 			echo $clientPhone = $row['clientPhone'];
 			echo $workerPhone = $row['workerPhone']; 
+		}else{
+			echo "Error: " . $sql . "<br>" . $db->error;
+			header("location: ../html/home.php");
 		}
 
 

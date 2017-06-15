@@ -1,5 +1,16 @@
 <?php
 	include("workercheck.php");	
+
+	if ($result = mysqli_query($db, "SELECT * FROM tbljoborders WHERE workerJobStatus='pending' AND workerUsername='$login_user'")) {
+
+    /* determine number of rows result set */
+    $row_cnt = mysqli_num_rows($result);
+
+    printf("Result set has %d rows.\n", $row_cnt);
+
+    /* close result set */
+    mysqli_free_result($result);
+}
 ?>
 
 <!doctype html>
@@ -30,7 +41,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Book Job</a></li>
-				<li><a href="workerpendingjobs.php">Orders and Confirmations</a></li>
+				<li><a href="workerpendingjobs.php">Orders and Confirmations <span class="badge"><?php echo $row_cnt;?></span></a></li>
 				<li><a href="#">about Us</a></li>
 				<li><a href="#">Contact Us</a></li>
 			</ul>
