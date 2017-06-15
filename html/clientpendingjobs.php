@@ -32,7 +32,7 @@ $sql = "SELECT jobID, workerFname, workerSname, jobDescription, jobDate, totalCo
 	}
 
 	td, th {
-	    border: 0px solid #dddddd !important;
+	    border: 1px solid #dddddd !important;
 	    text-align: center !important;
 	    padding: 8px !important;
 
