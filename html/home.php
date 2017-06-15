@@ -68,8 +68,6 @@
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
 <div class="container-fluid">
 	<div class="col-sm-6 col-md-6">
 		<h3 class="hello">Hello, <strong><?php echo $login_user;?>!</strong></h3>
@@ -111,9 +109,10 @@
 	            <br/>
 	            <br/>
 	            <button type="submit" name="submit" class="btn btn-info btn-block">Confirm Booking</button>
+
+
         </fieldset>
 		</form>
-		
 	</div>	
 </div>
 
