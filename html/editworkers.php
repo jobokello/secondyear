@@ -74,7 +74,7 @@ if(isset($_POST['update']))
 		if(mysqli_query($db,$sql1)==TRUE){
 		//redirectig to the display page. In our case, it is index.php
 		//echo "update was successful";	
-		header("Location: adminclients.php");
+		header("Location: adminworkers.php");
 	}else{
 		echo "Error: " . $sql1 . "<br>" . $db->error;
 	}
@@ -85,7 +85,6 @@ if(isset($_POST['update']))
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/homepage.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -141,7 +140,7 @@ tr:nth-child(even) {
             <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Welcome Joxide</a></li>
             <li><a href="#about"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li>            
           </ul>
-        </div><!--/.nav-collapse
+        </div><!--/.nav-collapse-->
       </div>
     </nav>
     <header style="position: fixed;" id="header">
@@ -164,7 +163,7 @@ tr:nth-child(even) {
 					</div>
 				</div>		
 		    </div>
-	    </div><!-- /.container -->
+	    </div><!-- /.container-->
 	</header>
 	<br>
 	<br>
@@ -172,7 +171,7 @@ tr:nth-child(even) {
 	<br>
 	<br>
 	<br>
-	<div class="container">-->
+	<div class="container">
 		<form name="form1" method="post" action="">
 			<table border="0">
 				<tr> 

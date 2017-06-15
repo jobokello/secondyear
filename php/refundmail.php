@@ -99,5 +99,7 @@ echo 'welcome';
 						    echo 'Message has been sent also to worker';
 						    header("location: ../html/clientpendingjobs.php");
 						}
+		
 				}
+
 ?>

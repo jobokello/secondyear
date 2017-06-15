@@ -54,7 +54,7 @@ $sql = "update tbljobOrders set workerJobStatus ='cancelled', clientJobStatus='c
                   //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
                   $mail->isHTML(true);                                  // Set email format to HTML
 
-                  $mail->Subject = 'Successful Order Delivery';
+                  $mail->Subject = 'job cancelled by worker';
                   $mail->Body    =  "<br>Dear $clientFname $clientSname this is to notify you that you order number: $jobID which was scheduled for $jobDate with the description $jobDescription has been cancelled by $workerFname $workerSname due to unavoidable circumstances<br>You can however login into your account and make a new booking and we will try our best to hook you up to the next available employee.<br>We thank you for giving us the chance to serve you.<br>Feel free to contact us with any complaints and quetsions.<br>Regards<br>
                   The Fundis.";
                   $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';

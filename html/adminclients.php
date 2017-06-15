@@ -23,22 +23,22 @@ $sql1 = "SELECT clientID, fName, sName, username, email, phone, county, constitu
 		font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
 		font-size:16px;
 	}
-	table {
-    font-family: arial, sans-serif !important;
-    border-collapse: collapse !important;
-    width: 100% !important;
-}
+		table {
+	    font-family: arial, sans-serif !important;
+	    border-collapse: collapse !important;
+	    width: 100% !important;
+	}
 
-td, th {
-    border: 0px solid #dddddd !important;
-    text-align: center !important;
-    padding: 8px !important;
+	td, th {
+	    border: 0px solid #dddddd !important;
+	    text-align: center !important;
+	    padding: 8px !important;
 
-}
+	}
 
-tr:nth-child(even) {
-    background-color: #dddddd !important;
-}
+	tr:nth-child(even) {
+	    background-color: #dddddd !important;
+	}
 	</style>
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<title>Admin Clients</title>

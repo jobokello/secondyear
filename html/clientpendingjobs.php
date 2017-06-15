@@ -24,6 +24,23 @@ $sql = "SELECT jobID, workerFname, workerSname, jobDescription, jobDate, totalCo
 		font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
 		font-size:16px;
 	}
+
+	able {
+	    font-family: arial, sans-serif !important;
+	    border-collapse: collapse !important;
+	    width: 100% !important;
+	}
+
+	td, th {
+	    border: 0px solid #dddddd !important;
+	    text-align: center !important;
+	    padding: 8px !important;
+
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd !important;
+	}
 	</style>
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<title>Homepage</title>
