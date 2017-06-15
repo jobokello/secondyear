@@ -134,7 +134,7 @@ tr:nth-child(even) {
 		echo "<td>".$res['securityAnswer']."</td>";	
 		echo "<td>".$res['latitude']."</td>";
 		echo "<td>".$res['longitude']."</td>";			
-		echo "<td width='30'><a href=\"../php/clientjobconfirmation.php?id=$res[clientID]\">Edit</a> | <a href=\"../php/clientjobcancellation.php?id=$res[clientID]\" onClick=\"return confirm('Are you sure you want to cancel the and get a refund?')\">Delete</a></td>";
+		echo "<td width='30'><a href=\"editclients.php?id=$res[clientID]\">Edit</a> | <a href=\"deleteclients.php?id=$res[clientID]\" onClick=\"return confirm('Are you sure you want to Delete this client from the system?')\">Delete</a></td>";
 		echo "</tr>";		
 	}/*else{
 		 printf("Error: %s\n", mysqli_error($db));

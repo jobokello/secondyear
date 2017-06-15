@@ -59,7 +59,7 @@
                 </div>
                 <div class="form-group col-xs-6">
                     <label for="natID">National ID number:</label>
-                    <input type="text" class="form-control" id="natID" name="natID" required title="Please enter your natinal identification card number">
+                    <input type="text" class="form-control" id="natID" name="natID" maxlength="8" minlength="8" required title="Please enter your natinal identification card number">
                 </div>
                 <div class="form-group col-xs-6">
                     <label for="workerSkills">Skills Category:</label>

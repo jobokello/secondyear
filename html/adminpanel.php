@@ -43,9 +43,9 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Dashboard</a></li>
-            <li><a href="#about">pages</a></li>
-            <li><a href="#contact">posts</a></li>
-            <li><a href="#contact">users</a></li>
+            <li><a href="#about">Book job</a></li>
+            <li><a href="#contact">Log into client account</a></li>
+            <li><a href="#contact">Log into Worker account</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Welcome Joxide</a></li>
@@ -58,20 +58,20 @@
 	    <div class="container">
 		    <div class="row">
 				<div class="col-md-10">
-					<h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard <small>site management</small></h1>
+					<h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard <small>Fundis site management</small></h1>
 				</div>
 				<div class="col-md-2">
 					<div class="dropdown create">
-					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-					    Create content
-					    <span class="caret"></span>
+					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Create New Users <span class="caret"></span>
 					  </button>
 					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-					    <li><a href="#">Add client</a></li>
-					    <li><a href="#">Add worker</a></li>
-					    <li><a href="#">Add job order</a></li>
+					    <li><a href="addclients.php">Add client</a></li>
+					    <li><a href="addworkers.php">Add worker</a></li>
+					    <!--<li><a href="#addorders.php">Add job order</a></li>-->
+					    <!--<li><a href="#addpayment.php">Add new payment record</a></li>-->
+					    <!--<li><a href="#addrefunds.php">Add new refund record</a></li>-->
 					    <li role="separator" class="divider"></li>
-					    <li><a href="#">Back to home page</a></li>
+					    <li><a href="adminpanel.php">Back to home page</a></li>
 					  </ul>
 					</div>
 				</div>		
@@ -122,7 +122,7 @@
 				    <div class="col-md-3">
 				    	<div class="well dash-box">
 				    		<h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span>12</h2>
-				    		<h4>clients</h4>
+				    		<h4>Clients</h4>
 				    	</div>
 				    </div>
 				    <div class="col-md-4">
@@ -140,19 +140,19 @@
 				    <div class="col-md-4">
 				    	<div class="well dash-box">
 				    		<h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>45</h2>
-				    		<h4>orders placed</h4>
+				    		<h4>Orders Placed</h4>
 				    	</div>
 				    </div>
 				    <div class="col-md-4">
 				    	<div class="well dash-box">
 				    		<h2><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>38</h2>
-				    		<h4>Paymenst made</h4>
+				    		<h4>Paymenst Made</h4>
 				    	</div>
 				    </div>
 				    <div class="col-md-4">
 				    	<div class="well dash-box">
 				    		<h2><span class="glyphicon glyphicon-usd" aria-hidden="true"></span>4</h2>
-				    		<h4>Refunds given</h4>
+				    		<h4>Refunds Given</h4>
 				    	</div>
 				    </div>
 				  </div>

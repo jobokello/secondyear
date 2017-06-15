@@ -124,7 +124,7 @@ tr:nth-child(even) {
 		echo "<td>".$res['refundAmount']."</td>";
 		echo "<td>".$res['clientPhone']."</td>";
 		echo "<td>".$res['refundStatus']."</td>";					
-		echo "<td width='30'><a href=\"../php/clientjobconfirmation.php?id=$res[workerID]\">Edit</a> | <a href=\"../php/clientjobcancellation.php?id=$res[workerID]\" onClick=\"return confirm('Are you sure you want to cancel the and get a refund?')\">Delete</a></td>";
+		echo "<td width='30'><a href=\"editrefunds.php?id=$res[refundID]\">Edit</a> | <a href=\"deleterefunds.php?id=$res[refundID]\" onClick=\"return confirm('Are you sure you want to cancel the refund?')\">Delete</a></td>";
 		echo "</tr>";		
 	}/*else{
 		 printf("Error: %s\n", mysqli_error($db));
