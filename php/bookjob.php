@@ -1,6 +1,5 @@
 <?php
 	include('../html/check.php');
-	require '../PHPMailer/PHPMailerAutoload.php';
 	//include('../html/connection.php');
 
 
@@ -67,7 +66,6 @@
 		   			echo  "New record created successfully";
 
 		   		}else {
-
 		   			echo "Error: " . $sql . "<br>" . $db->error;
 		   		}
 
@@ -79,40 +77,7 @@
 		   		header("location: mailer.php");
 
 			}else{
-
-				$mail = new PHPMailer;
-
-				//$mail->SMTPDebug = 3;                               // Enable verbose debug output
-
-				$mail->isSMTP();                                      // Set mailer to use SMTP
-				$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
-				$mail->SMTPAuth = true;                               // Enable SMTP authentication
-				$mail->Username = 'fundisfixem@gmail.com';                 // SMTP username
-				$mail->Password = 'workers2017';                           // SMTP password
-				$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-				$mail->Port = 465;                                    // TCP port to connect to
-
-				$mail->setFrom('fundisfixem@gmail.com', 'The Fundis');
-				$mail->addAddress($clientEmail);     // Add a recipient
-				//$mail->addReplyTo('info@example.com', 'Information');
-				//$mail->addCC('cc@example.com');
-				//$mail->addBCC('bcc@example.com');
-
-				//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-				//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-				$mail->isHTML(true);                                  // Set email format to HTML
-
-				$mail->Subject = 'No match found';
-				$mail->Body    =  "<br>Dear $clientFname $clientSname this is to notify you no match could be found for your job order. We are working increasing our worker database so to deal with such issues in the future. kindly check in later to see if we might be having any free workers.<br>Feel free to contact us with any complaints and quetsions.<br>Regards<br>
-				The Fundis.";
-				$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-				if(!$mail->send()) {
-				    echo 'Message could not be sent.';
-				    echo 'Mailer Error: ' . $mail->ErrorInfo;
-				} else {
-					header("location: ../html/home.php");
-				}
+				header("location../html/home.php");
 			}
 
 
