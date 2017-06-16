@@ -22,6 +22,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/homepage.css">
+	<link rel="stylesheet" href="../css/background.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>User account Home</title>
@@ -36,6 +37,7 @@
 </head>
 
 <body>
+<div class="bodywise">
 <div class="container">
 <nav class="navbar navbar-inverse navbar-transparent navbar-fixed-top" role="navigation">
 	<div class="container-fluid">
@@ -68,6 +70,7 @@
 <br/>
 <br/>
 <br/>
+
 <div class="container-fluid">
 	<div class="col-sm-6 col-md-6">
 		<h3 class="hello">Hello, <strong><?php echo $login_user;?>!</strong></h3>
@@ -138,6 +141,7 @@
         </div>
     </div>
 </footer>
+</div>
 <script type="text/javascript">
 			var skills = document.getElementById('workerSkills');
     		var	wages = document.getElementById('totalCost');
