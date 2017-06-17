@@ -4,8 +4,9 @@
 	<title>The Fundis</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/homepage.css">
+	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/homepage.css">
+	<link rel="stylesheet" href="../css/background.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style type="text/css">
@@ -25,7 +26,7 @@
 			background-image: url(icons/requst.ico);
 		}
 		.bodywise{
-			background-image: url(images/website.jpg);
+			background-image: url(../images/website.jpg);
 		}
 		#about_us ul li,#how_it_works,p{
 			font-size: 1.6em;
@@ -84,48 +85,11 @@
 <div class="page-header">
 	<h1>Welcome to the Fundis Fixem!</h1>
 </div>
-<div class="jumbotron">
-		<!--<img  class="img-responsive" src="images/juakali.jpg">
-		<img  class="img-responsive" src="images/juakali2.jpg">-->
-		<img  class="img-responsive" src="images/juakali4.jpg">
+<h3>Account created successfully <a href="../html/index.php">click here</a> log into your account</h3>
+
 </div>
-<div id="about_us">
-<p>Hallo and welcome to the Fundis<br>Has your lifr ever come to a stand still simply because you needed work done and did not have the right person for the job?<br>Well worry no more because we here at the Fundis have you covered.<br>We at Fundis.com will work to ensure that you get the best service to suite your domestic needs <br>
-we will offer you the following services</p>
-	<legend>Joblist</legend>
-		<ul>
-			<li><img src="icons/carpenter_32.png"></span> Carpentry</li>
-			<li><img src="icons/mechanic_32.png"></span> Mechanics</li>
-			<li><img src="icons/Electricity_32.png"></span> Electricians</li>
-			<li><img src="icons/Plumber_32.png"></span> Plumbers</li>
-			<li><img src="icons/Garden_32.png"></span>Gardeners</li>
-			<li><img src="icons/Cleaner_32.png"></span>Cleaner</li>
-			<li>...And many More...</li>
-		</ul>
-	</legend>
-	</div>
-	<div>
-		
-	</div>
-	<div id="how_it_works">
-		<legend>How the system works</legend>
-		<ol>
-			<li><span><img src="icons/request_32.png"></span> Simlpy apply</li>
-			<li><img src="icons/Search_32.png"></span>We find a match for you</li>
-			<li><img src="icons/Cash_in_hand_32.png"></span>Make the Payment</li>
-			<li><img src="icons/Businessman_48px.png"></span>Get served</li>
-			<li><img src="icons/Receive_Cash_32.png"></span>Your Worker gets paid</li>
-		</ol>
-	</div>
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</div>
-<footer class=" site-footer navbar navbar-inverse  container-fluid">
+<footer class=" site-footer navbar navbar-inverse navbar-fixed-bottom  container-fluid">
 	<div id="theContent">
 		<div class="col-md-3 col-sm-3">
 
@@ -142,8 +106,8 @@ we will offer you the following services</p>
 		<div class="gridInfo col-md-3 col-sm-3">
 			<h5>Social Media</h5>
 		<ul>
-			<li><img src="icons/Facebook_32.png"></span></li>
-			<li><img src="icons/Twitter_32.png"></span></li>
+			<li><img src="../icons/Facebook_32.png"></span></li>
+			<li><img src="../icons/Twitter_32.png"></span></li>
 		<ul>
 		</div>
 	</div>

@@ -37,7 +37,7 @@
 	    echo "New record created successfully";
 	    session_start();
 	    $_SESSION['user'] = $uid;
-	    header("location: ../html/workerindex.php");
+	    header("location: ../html/workeraccountsuccess.php");
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}

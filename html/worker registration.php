@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/homepage.css">
     <link rel="stylesheet" href="../css/clientReg.css">
+    <link rel="stylesheet" href="../css/background.css">
     <style type="text/css">
         #map{ width:420px; height: 300px; }
     </style>

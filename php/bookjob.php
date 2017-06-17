@@ -77,7 +77,7 @@
 		   		header("location: mailer.php");
 
 			}else{
-				header("location../html/home.php");
+				header("location: nomatchmail.php");
 			}
 
 

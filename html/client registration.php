@@ -6,11 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/homepage.css">
+        <link rel="stylesheet" href="../css/background.css">
         <link rel="stylesheet" href="../css/clientReg.css">
         <style type="text/css">
           #map{ 
-          	width: 580px; 
-          	height: 350px;
+          	width: 640px; 
+          	height: 380px;
           	border: 1px solid green;
           }
         </style>

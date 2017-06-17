@@ -11,6 +11,46 @@
     /* close result set */
     mysqli_free_result($result);
 }
+if ($result = mysqli_query($db, "SELECT * FROM tbljoborders WHERE workerUsername='$login_user'")) {
+
+    /* determine number of rows result set */
+    $row_served = mysqli_num_rows($result);
+
+    printf("Result set has %d rows.\n", $row_served);
+
+    /* close result set */
+    mysqli_free_result($result);
+}
+if ($result = mysqli_query($db, "SELECT * FROM tbljoborders WHERE (workerJobStatus='confirmed' AND clientJobStatus='confirmed') AND workerUsername='$login_user'")) {
+
+    /* determine number of rows result set */
+    $row_success = mysqli_num_rows($result);
+
+    printf("Result set has %d rows.\n", $row_success);
+
+    /* close result set */
+    mysqli_free_result($result);
+}
+if ($result = mysqli_query($db, "SELECT * FROM tbljoborders WHERE (workerJobStatus='confirmed' AND clientJobStatus='confirmed') AND workerUsername='$login_user'")) {
+
+    /* determine number of rows result set */
+    $row_payment = mysqli_num_rows($result);
+
+    printf("Result set has %d rows.\n", $row_payment);
+
+    /* close result set */
+    mysqli_free_result($result);
+}
+if ($result = mysqli_query($db, "SELECT * FROM tbljoborders WHERE (workerJobStatus='cancelled' AND clientJobStatus='cancelled') AND workerUsername='$login_user'")) {
+
+    /* determine number of rows result set */
+    $row_refund = mysqli_num_rows($result);
+
+    printf("Result set has %d rows.\n", $row_refund);
+
+    /* close result set */
+    mysqli_free_result($result);
+}
 ?>
 
 <!doctype html>
@@ -21,6 +61,17 @@
 	<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/homepage.css">
 	<link rel="stylesheet" href="../css/background.css">
+	<style type="text/css">
+		p,.container li{
+			font-size: 1.6em;
+		}
+		ul {
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 0;
+		}
+
+	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>worker account Home</title>
@@ -59,9 +110,18 @@
 </nav>
 <br/>
 <br/>
+<div class="container">
+<h1 class="hello">Hello, <strong><?php echo $login_user;?>!</strong></h1>
+<p>The Fundis family woul like to thank you for effort in service to our esteemed clients<br>Through your service have been able to achieve the following.<br></p>
+<ul>
+	<li><img src="../icons/customer_32.png"> Number of customers served was:<span class="badge"><?php echo $row_served;?></span> </li>
+	<li><img src="../icons/success_32.png">Number of successful order deliveries was:<span class="badge"><?php echo $row_success;?></span></li>
+	<li><img src="../icons/receive_cash_32.png">Number of payment made to your account are:<span class="badge"><?php echo $row_payment;?></span> </li>
+	<li><img src="../icons/refund_32.png">However due unavoidable circumstances we had to refund <span class="badge"><?php echo $row_refund;?></span> of our clients assigned to you</li>
+</ul>
+<br><p>Kindly check into your unconfirmed orders and confirm them if the client has been served.<br>If your are facing any challenges kindly feel free to cancel any orders and contact us afterwards so that we might know how to be of help the next time such an occurrence takes place.</p>
 
-<h1 class="hello">Hello, <em><?php echo $login_user;?>!</em></h1>
-
+</div>
 
 <footer class=" site-footer navbar navbar-fixed-bottom navbar-inverse container-fluid">
     <div id="theContent">

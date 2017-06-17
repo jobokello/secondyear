@@ -34,7 +34,7 @@ if ($conn->connect_error) {
 
 	if ($conn->query($sql) === TRUE) {
 	    echo "New record created successfully";
-	    header('location: ../html/index.php');
+	    header('location: ../html/clientaccountsuccess.php');
 	} else {
 	    echo "Error: " . $sql . "<br>" . $conn->error;
 	}

@@ -150,7 +150,6 @@ input[type=submit]
             <h5>Help & support</h5>
             <ul >
                 <li><a href="#">Home</a></li>
-                <li><a href="#">How it works</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact US</a></li>
             </ul>
@@ -158,6 +157,10 @@ input[type=submit]
 
         <div class="gridInfo col-md-3 col-sm-3">
             <h5>Social Media</h5>
+            <ul>
+				<li><img src="../icons/Facebook_32.png"></span></li>
+				<li><img src="../icons/Twitter_32.png"></span></li>
+			<ul>
         </div>
     </div>
 </footer>
