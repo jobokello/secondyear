@@ -31,7 +31,7 @@
 			echo $clientLocLatitude=$row['latitude'];
 			echo $clientLocLongitude=$row['longitude'];
 
-			$sql = "SELECT workerID, fName, sName, username, email, phone FROM myworkersinfo WHERE workerSkills='$workerSkills' AND (county = '$county' OR constituency='$constituency') ORDER BY jobCount ASC LIMIT 1";
+			$sql = "SELECT workerID, fName, sName, username, email, phone FROM myworkersinfo WHERE workerSkills='$workerSkills' AND (county = '$county' OR constituency='$constituency') AND workerStatus = 'available' ORDER BY jobCount ASC LIMIT 1";
 
 			/*$sql = "SELECT workerID, fName, sName, email, phone FROM myworkersinfo WHERE workerSkills='Painter' AND (county = 'Nairobi' OR constituency='Parklands') ORDER BY jobCount ASC LIMIT 1";*/
 			
@@ -71,7 +71,7 @@
 
 
 
-		   		$sql = "Update myworkersinfo set jobCount = jobCount + 1 where workerID = '$workerID'";
+		   		$sql = "UPDATE myworkersinfo SET jobCount = jobCount + 1, workerStatus='booked' where workerID = '$workerID'";
 		   		mysqli_query($db,$sql);
 
 		   		header("location: mailer.php");

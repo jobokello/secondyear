@@ -4,7 +4,7 @@ include_once("connection.php");
 
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
-$sql1 = "SELECT workerID, fName, sName, username, natID, workerSkills, tertiaryInstitution, testimonial, email, phone, county, constituency, workerPassWord, securityQuestion, securityAnswer, jobCount FROM myworkersinfo ORDER BY workerID ASC"; // using mysqli_query instead
+$sql1 = "SELECT workerID, fName, sName, username, natID, workerSkills, tertiaryInstitution, testimonial, email, phone, county, constituency, workerPassWord, securityQuestion, securityAnswer, jobCount, workerStatus FROM myworkersinfo ORDER BY fName ASC"; // using mysqli_query instead
 	$result= mysqli_query($db,$sql1);
 ?>
 <!DOCTYPE html>
@@ -54,11 +54,11 @@ tr:nth-child(even) {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">The Fundis</a>
+          <a class="navbar-brand" href="adminpanel.php">The Fundis</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Dashboard</a></li>
+            <li class="active"><a href="adminpanel.php">Dashboard</a></li>
             <li><a href="#about">pages</a></li>
             <li><a href="#contact">posts</a></li>
             <li><a href="#contact">users</a></li>
@@ -118,6 +118,7 @@ tr:nth-child(even) {
 		<th>Security Question</td>
 		<th>Security Answer</td>
 		<th>Job Count</td>
+		<th>Availability Status</td>
 		<th colspan="2">options</td>
 	</tr>
 	<?php 
@@ -139,7 +140,8 @@ tr:nth-child(even) {
 		echo "<td>".$res['workerPassWord']."</td>";
 		echo "<td>".$res['securityQuestion']."</td>";	
 		echo "<td>".$res['securityAnswer']."</td>";	
-		echo "<td>".$res['jobCount']."</td>";				
+		echo "<td>".$res['jobCount']."</td>";
+		echo "<td>".$res['workerStatus']."</td>";				
 		echo "<td width='30'><a href=\"editworkers.php?id=$res[workerID]\">Edit</a> | <a href=\"deleteworkers.php?id=$res[workerID]\" onClick=\"return confirm('Are you sure you want to cancel the and get a refund?')\">Delete</a></td>";
 		echo "</tr>";		
 	}/*else{
@@ -150,26 +152,6 @@ tr:nth-child(even) {
 	<br>
 	<br>
 	<br>
-	<footer class=" site-footer navbar navbar-inverse container-fluid">
-	    <div id="theContent">
-	        <div class="col-md-12 col-sm-12">
-
-	        </div>
-	        <div class="gridInfo col-md-3 col-sm-3">
-	            <h5>Help & support</h5>
-	            <ul >
-	                <li><a href="#">Home</a></li>
-	                <li><a href="#">How it works</a></li>
-	                <li><a href="#">About Us</a></li>
-	                <li><a href="#">Contact US</a></li>
-	            </ul>
-	        </div>
-
-	        <div class="gridInfo col-md-3 col-sm-3">
-	            <h5>Social Media</h5>
-	        </div>
-	    </div>    
-	</footer>
 </div>
 </body>
 </html>

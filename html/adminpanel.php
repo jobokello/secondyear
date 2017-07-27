@@ -5,7 +5,7 @@
     /* determine number of rows result set */
     $row_clients = mysqli_num_rows($result);
 
-    printf("Result set has %d rows.\n", $row_clients);
+    //printf("Result set has %d rows.\n", $row_clients);
 
     /* close result set */
     mysqli_free_result($result);
@@ -16,7 +16,7 @@ if ($result = mysqli_query($db, "SELECT * FROM myworkersinfo")) {
     /* determine number of rows result set */
     $row_workers = mysqli_num_rows($result);
 
-    printf("Result set has %d rows.\n", $row_workers);
+    //printf("Result set has %d rows.\n", $row_workers);
 
     /* close result set */
     mysqli_free_result($result);
@@ -27,7 +27,7 @@ if ($result = mysqli_query($db, "SELECT * FROM tbljoborders")) {
     /* determine number of rows result set */
     $row_orders = mysqli_num_rows($result);
 
-    printf("Result set has %d rows.\n", $row_orders);
+    //printf("Result set has %d rows.\n", $row_orders);
 
     /* close result set */
     mysqli_free_result($result);
@@ -38,7 +38,7 @@ if ($result = mysqli_query($db, "SELECT * FROM tblrefunds")) {
     /* determine number of rows result set */
     $row_refunds = mysqli_num_rows($result);
 
-    printf("Result set has %d rows.\n", $row_refunds);
+    //printf("Result set has %d rows.\n", $row_refunds);
 
     /* close result set */
     mysqli_free_result($result);
@@ -49,7 +49,7 @@ if ($result = mysqli_query($db, "SELECT * FROM tblpayment")) {
     /* determine number of rows result set */
     $row_payments = mysqli_num_rows($result);
 
-    printf("Result set has %d rows.\n", $row_payments);
+    //printf("Result set has %d rows.\n", $row_payments);
 
     /* close result set */
     mysqli_free_result($result);
@@ -152,10 +152,15 @@ $paymentpercent=($row_payments/$row_orders)*100;
 			<div class="row">
 			<div class="col-md-3">
 				<div class="list-group">
+				
 				  <a href="adminclients.php" class="list-group-item active main-color-bg"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> clients <span class="badge"><?php echo $row_clients;?></span></a>
+
 				  <a href="adminworkers.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Workers<span class="badge"><?php echo $row_workers;?></span></a>
+
 				  <a href="adminorders.php" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Orders <span class="badge"><?php echo $row_orders;?></span></a>
+
 				  <a href="adminwages.php" class="list-group-item"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Wage payment <span class="badge"><?php echo $row_payments;?></span></a>
+
 				  <a href="adminrefunds.php" class="list-group-item"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> Client Refunds <span class="badge"><?php echo $row_refunds;?></span></a>
 				</div>
 				<div class="well">

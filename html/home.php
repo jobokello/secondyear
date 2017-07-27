@@ -8,7 +8,7 @@
     /* determine number of rows result set */
     $row_cnt = mysqli_num_rows($result);
 
-    printf("Result set has %d rows.\n", $row_cnt);
+    //printf("Result set has %d rows.\n", $row_cnt);
 
     /* close result set */
     mysqli_free_result($result);
@@ -97,11 +97,15 @@
 	                <label for="jobDescription">Job Description:</label>
 	                <textarea class="form-control" id="jobDescription" name="jobDescription" required title="Please give a short description of the job you want done." required></textarea>
 	            </div>
-	            <div class="form-group col-md-6 col-sm-6 col-xs-6">
-	                <label for="date">Date:</label>
+	            <div class="form-group col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+	                <label for="jobDescription">Job Duration (Days):</label>
+	                <input type="number" class="form-control" id="duration" name="duration" style="text-align: center;" value="1" required title="Please enter the number of days that you wish to book the worker">
+	            </div>
+	            <div class="form-group col-md-4 col-sm-4 col-xs-4">
+	                <label for="date">Date of order:</label>
 	                <input type="date" class="form-control" id="date" name="date" required title="Please enter a future date on which you want the job done." required>
 	            </div>
-	            <div class="form-group col-md-6 col-sm-6 col-xs-6">
+	            <div class="form-group col-md-4 col-sm-4 col-xs-4">
 	                <label for="totalCost">Total Cost in ksh:</label>
 	                <input type="text" class="form-control" id="totalCost" name="totalCost" required title="This is the basic cost of the service you'll receive" readonly="yes" required>
 
@@ -148,17 +152,19 @@
 			var skills = document.getElementById('workerSkills');
     		var	wages = document.getElementById('totalCost');
     		var	description = document.getElementById('jobDescription');
+    		var	duration = document.getElementById('duration');
+    		var	orderDate = document.getElementById('date');
     		
-			description.onchange = function () { 
+			orderDate.onchange = function () { 
 				
 				/*wages.value= 10;
 				alert(wages.value);*/
 
 				 if (skills.value == "Carpenter") {
-			    	var price = "650";
-			        alert("Your total cost for the service will be ksh. 650 for the day");
+				 	var	durationValue = document.getElementById('duration').value;
+			    	var price = durationValue * 650;
+			        alert("Your total cost for the service will be ksh. " + price);
 			        wages.value = price;
-			        //alert(wages.value);
 			    }
 
 			    else if (skills.value == "Cleaner") {

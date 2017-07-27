@@ -4,7 +4,7 @@ include_once("connection.php");
 
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM users ORDER BY id DESC"); // mysql_query is deprecated
-$sql1 = "SELECT paymentID, workerID, workerFname, workerSname, jobID, paymentAmount, workerPhone, paymentStatus FROM tblpayment ORDER BY paymentID ASC"; // using mysqli_query instead
+$sql1 = "SELECT paymentID, workerID, workerFname, workerSname, jobID, paymentAmount, workerPhone, paymentStatus, paymentDate FROM tblpayment ORDER BY paymentID ASC"; // using mysqli_query instead
 	$result= mysqli_query($db,$sql1);
 ?>
 <!DOCTYPE html>
@@ -110,7 +110,8 @@ tr:nth-child(even) {
 		<th>Amount payable</td>
 		<th>Worker's phone no.</td>
 		<th>Payment Status</td>
-		<th colspan="2">options</td>
+		<th>Payment Date</td>
+		<th rowspan="3">options</td>
 	</tr>
 	<?php 
 	//while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
@@ -123,8 +124,9 @@ tr:nth-child(even) {
 		echo "<td>".$res['jobID']."</td>";
 		echo "<td>".$res['paymentAmount']."</td>";
 		echo "<td>".$res['workerPhone']."</td>";
-		echo "<td>".$res['paymentStatus']."</td>";					
-		echo "<td width='30'><a href=\"editpayment.php?id=$res[paymentID]\">Edit</a> | <a href=\"deletepayment.php?id=$res[paymentID]\" onClick=\"return confirm('Are you sure you want to delete the payment record?')\">Delete</a></td>";
+		echo "<td>".$res['paymentStatus']."</td>";
+		echo "<td>".$res['paymentDate']."</td>";						
+		echo "<td width='30'><a href=\"editpayment.php?id=$res[paymentID]\">Edit</a>  <a href=\"payworker.php?id=$res[paymentID]\">Pay</a>  <a href=\"deletepayment.php?id=$res[paymentID]\" onClick=\"return confirm('Are you sure you want to delete the payment record?')\">Delete</a></td>";
 		echo "</tr>";		
 	}/*else{
 		 printf("Error: %s\n", mysqli_error($db));
@@ -134,26 +136,6 @@ tr:nth-child(even) {
 	<br>
 	<br>
 	<br>
-	<footer class=" site-footer navbar navbar-inverse container-fluid">
-	    <div id="theContent">
-	        <div class="col-md-12 col-sm-12">
-
-	        </div>
-	        <div class="gridInfo col-md-3 col-sm-3">
-	            <h5>Help & support</h5>
-	            <ul >
-	                <li><a href="#">Home</a></li>
-	                <li><a href="#">How it works</a></li>
-	                <li><a href="#">About Us</a></li>
-	                <li><a href="#">Contact US</a></li>
-	            </ul>
-	        </div>
-
-	        <div class="gridInfo col-md-3 col-sm-3">
-	            <h5>Social Media</h5>
-	        </div>
-	    </div>    
-	</footer>
 </div>
 </body>
 </html>

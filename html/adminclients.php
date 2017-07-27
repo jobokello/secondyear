@@ -39,6 +39,7 @@ $sql1 = "SELECT clientID, fName, sName, username, email, phone, county, constitu
 	tr:nth-child(even) {
 	    background-color: #dddddd !important;
 	}
+
 	</style>
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<title>Admin Clients</title>
@@ -101,22 +102,24 @@ $sql1 = "SELECT clientID, fName, sName, username, email, phone, county, constitu
 <!--<a href="add.html">Add New Data</a><br/><br/>-->
 	<!--<legend style="text-align: center; position: relative;">Clients List</legend>-->
 	<table width='100%' style="border: ">
+	
 		<caption><legend style="text-align: center; position: relative;">Clients List</legend></caption>
-	<tr bgcolor='#CCCCCC'>
-		<th>ClientID</td>
-		<th colspan="2">Client Names</td>
-		<th>Username</td>
-		<th>email</td>
-		<th>phone</td>
-		<th>County</td>
-		<th>Constituency</td>
-		<th>clientPassword</td>
-		<th>securityQuestion</td>
-		<th>securityAnswer</td>
-		<th>latitude</td>
-		<th>longitude</td>
-		<th colspan="2">options</td>
-	</tr>
+		<tr bgcolor='#CCCCCC'>
+			<th>ClientID</th>
+			<th colspan="2">Client Names</th>
+			<th>Username</th>
+			<th>email</th>
+			<th>phone</th>
+			<th>County</th>
+			<th>Constituency</th>
+			<th>clientPassword</th>
+			<th>securityQuestion</th>
+			<th>securityAnswer</th>
+			<th>latitude</th>
+			<th>longitude</th>
+			<th colspan="2">options</th>
+		</tr>
+	
 	<?php 
 	//while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
 	while($res = mysqli_fetch_array($result)) { 		
@@ -144,26 +147,7 @@ $sql1 = "SELECT clientID, fName, sName, username, email, phone, county, constitu
 	<br>
 	<br>
 	<br>
-	<footer class=" site-footer navbar navbar-inverse container-fluid">
-	    <div id="theContent">
-	        <div class="col-md-12 col-sm-12">
-
-	        </div>
-	        <div class="gridInfo col-md-3 col-sm-3">
-	            <h5>Help & support</h5>
-	            <ul >
-	                <li><a href="#">Home</a></li>
-	                <li><a href="#">How it works</a></li>
-	                <li><a href="#">About Us</a></li>
-	                <li><a href="#">Contact US</a></li>
-	            </ul>
-	        </div>
-
-	        <div class="gridInfo col-md-3 col-sm-3">
-	            <h5>Social Media</h5>
-	        </div>
-	    </div>    
-	</footer>
+	
 </div>
 </body>
 </html>

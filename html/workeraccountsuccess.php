@@ -68,8 +68,8 @@
 					</ul>
 				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"></span> Login<span class="caret"></span></a>
 					<ul class="dropdown-menu thedropdown">
-						<li><a href="html/index.php">Client</a></li>
-						<li><a href="html/workerindex.php">Worker</a></li>
+						<li><a href="index.php">Client</a></li>
+						<li><a href="workerindex.php">Worker</a></li>
 					</ul>
 			</ul>
 		</div>
