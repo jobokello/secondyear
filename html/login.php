@@ -8,7 +8,8 @@
 		if(empty($_POST["username"]) || empty($_POST["password"]))
 		{
 			$error = "Both fields are required.";
-		}else
+		}
+		else
 		{
 			// Define $username and $password
 			$username=$_POST['username'];

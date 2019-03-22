@@ -123,7 +123,7 @@
 	</div>	
 </div>
 
-</div>
+<div>
 <footer class=" site-footer navbar navbar-fixed-bottom navbar-inverse container-fluid">
     <div id="theContent">
         <div class="col-md-12 col-sm-12">

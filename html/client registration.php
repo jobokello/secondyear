@@ -120,8 +120,6 @@
                             <option value="Vihiga">
                             <option value="Wajir">
                             <option value="West Pokot">
-                           ">
-
                         </datalist>
                     </div>
                     <div class="form-group col-xs-6">

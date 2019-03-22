@@ -100,41 +100,44 @@ input[type=submit]
 
 
 <div class="wrapper">
-<div align="center">
-<h1><a href="http://www.eggslab.net/php-login-script">Client Login</a></h1>
-<table border="0">
-<tr>
-<td>
-<form method="post" action="">
-<table width="400" border="0" cellpadding="10" cellspacing="10">
-<tr>
-<td colspan="2" align="center" class="error"><?php echo $error;?></td>
-</tr>
-<tr>
-<td style="font-weight: bold"><div align="right"><label for="username"><span>Username : </span> <br/><br/></label></div></td>
-<td><input name="username" type="text" class="input" size="25" required /></td>
-</tr>
-<tr>
-<td height="23" style="font-weight: bold"><div align="right"><label for="password"><span>Password : </span><br/><br/></label></div></td>
-<td><input name="password" type="password" class="input" size="25" required /></td>
-</tr>
-<tr>
-<td height="23"></td>
-<td>
 	<div align="center">
-	  <input type="submit" name="submit" value="Login!" />
-	</div>
-</td>
-</tr>
-</table>
-<br/>
-<p align="center">Dont have an account? <a href="client registration.php">Sign up.</a></p>
-</form>
-</td>
-</tr>
+		<h1><a href="http://www.eggslab.net/php-login-script">Client Login</a></h1>
+		<table border="0">
+			<tr>
+				<td>
+				<form method="post" action="">
+					<table width="400" border="0" cellpadding="10" cellspacing="10">
+						<tr>
+							<td colspan="2" align="center" class="error"><?php echo $error;?></td>
+						</tr>
 
-</table>
-</div>
+						<tr>
+							<td style="font-weight: bold"><div align="right"><label for="username"><span>Username : </span> <br/><br/></label></div></td>
+							<td><input name="username" type="text" class="input" size="25" required /></td>
+						</tr>
+
+						<tr>
+							<td height="23" style="font-weight: bold"><div align="right"><label for="password"><span>Password : </span><br/><br/></label></div></td>
+							<td><input name="password" type="password" class="input" size="25" required /></td>
+						</tr>
+						
+						<tr>
+							<td height="23"></td>
+							<td>
+								<div align="center">
+								  <input type="submit" name="submit" value="Login!" />
+								</div>
+							</td>
+						</tr>
+					</table>
+					<br/>
+					<p align="center">Dont have an account? <a href="client registration.php">Sign up.</a></p>
+				</form>
+				</td>
+			</tr>
+
+		</table>
+	</div>
 
 </div> 
 
